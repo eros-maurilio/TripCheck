@@ -11,7 +11,9 @@ import SwiftUI
 struct CrashChallenge4App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }
