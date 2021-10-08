@@ -13,7 +13,7 @@ struct TagModifierSelected: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(.white)
-            .scaledFont(name: "PublicSans-Regular", size: 17)
+            .scaledFont(name: PublicSans.regular.rawValue, size: 17)
             .padding(10)
             .background(Color.deepBlue.cornerRadius(5))
             .shadow(color: .shadowColor.opacity(0.15), radius: 10, x: 0, y: 4)
@@ -25,7 +25,7 @@ struct TagModifierNotSelected: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(.black.opacity(0.6))
-            .scaledFont(name: "PublicSans-Regular", size: 17)
+            .scaledFont(name: PublicSans.regular.rawValue, size: 17)
             .padding(10)
             .background(Color.white.cornerRadius(5))
             .shadow(color: .shadowColor.opacity(0.15), radius: 10, x: 0, y: 4)

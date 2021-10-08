@@ -18,7 +18,7 @@ struct CombinationButtonView: View {
                     .resizable()
                     .aspectRatio(1, contentMode: .fit)
                 Text("Check Combination")
-                    .scaledFont(name: "PublicSans-Bold", size: 14)
+                    .scaledFont(name: PublicSans.bold.rawValue, size: 14)
                 Spacer()
             }
             .foregroundColor(.white)

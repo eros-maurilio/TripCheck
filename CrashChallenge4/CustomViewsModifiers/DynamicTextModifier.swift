@@ -25,3 +25,11 @@ extension View {
         return self.modifier(DynamicTextModifier(name: name, size: size))
     }
 }
+
+enum PublicSans: String {
+    case bold = "PublicSans-Bold"
+    case medium = "PublicSans-Medium"
+    case regular = "PublicSans-Regular"
+    case semiBold = "PublicSans-SemiBold"
+    case light = "PublicSans-Light"
+}
