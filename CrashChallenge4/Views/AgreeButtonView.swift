@@ -22,7 +22,7 @@ struct AgreeButtonView: View {
         .scaledFont(name: PublicSans.medium.rawValue, size: 14)
         .padding(.vertical, 12)
         .frame(width: .infinity)
-        .background(Color("GradientHomeTop"))
+        .background(Color.gradientHomeTop)
         .cornerRadius(5)
         .shadow(color: .shadowColor.opacity(0.15), radius: 4, x: 0, y: 4)
     }
