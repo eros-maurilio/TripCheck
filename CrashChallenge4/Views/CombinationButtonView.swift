@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct CombinationButtonView: View {
+    @Binding var substances: [String]
+    
     var body: some View {
-        Button {
-            //Action here
+        NavigationLink {
+            DetailCombinationView(substances: substances)
+            
         } label: {
             HStack {
                 Spacer()
@@ -26,14 +29,15 @@ struct CombinationButtonView: View {
             .background(Color.deepBlue)
             .cornerRadius(5)
         }
+        
     }
 }
 
-struct CombinationButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        CombinationButtonView()
-            .frame(width: 350, height: 40)
-            .previewLayout(.fixed(width: 390, height: 150))
-
-    }
-}
+//struct CombinationButtonView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CombinationButtonView()
+//            .frame(width: 350, height: 40)
+//            .previewLayout(.fixed(width: 390, height: 150))
+//
+//    }
+//}

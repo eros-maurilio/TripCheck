@@ -14,14 +14,14 @@ struct AgreeButtonView: View {
         }, label: {
             HStack {
                 Spacer()
-                Text("I read and understand the risks")
+                Text("OK")
                 Spacer()
             }
             .foregroundColor(.black)
         })
         .scaledFont(name: PublicSans.medium.rawValue, size: 14)
         .padding(.vertical, 12)
-        .frame(width: .infinity)
+//        .frame(width: UIScreen.main.bounds.width)
         .background(Color.gradientHomeTop)
         .cornerRadius(5)
         .shadow(color: .shadowColor.opacity(0.15), radius: 4, x: 0, y: 4)

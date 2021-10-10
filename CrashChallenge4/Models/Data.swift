@@ -7,26 +7,26 @@
 
 import SwiftUI
 
-struct DrugInteraction: Decodable {
-    var Status: String?
-    var Note: String?
+struct DrugInteraction: Codable, Hashable {
+    var status: String?
+    var note: String?
     var interactionCategoryA: String?
     var interactionCategoryB: String?
 }
 
-struct Response: Decodable {
+struct Response: Codable {
     var err: Bool?
     var data: [DrugInteraction]?
 }
 
 class Api {
-    func getSubstancesInfo(completion: @escaping ([DrugInteraction]) -> ()) {
-        guard let url = URL(string: "https://tripbot.tripsit.me/api/tripsit/getInteraction?drugA=cocaine&drugB=lsd") else { return }
+    func getSubstancesInfo(subsA: String, subsB: String,completion: @escaping ([DrugInteraction]) -> ()) {
+        guard let url = URL(string: "https://tripbot.tripsit.me/api/tripsit/getInteraction?drugA=\(subsA)&drugB=\(subsB)") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             let responses = try! JSONDecoder().decode(Response.self, from: data!)
             guard let interaction = responses.data else { return }
-        
+            print(interaction)
             DispatchQueue.main.async {
                 completion(interaction)
             }

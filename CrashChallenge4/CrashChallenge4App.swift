@@ -14,6 +14,7 @@ struct CrashChallenge4App: App {
             NavigationView {
                 ContentView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

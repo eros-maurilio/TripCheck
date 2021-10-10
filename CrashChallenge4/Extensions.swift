@@ -21,4 +21,24 @@ extension Color {
     
     public static var gradientDangerBot: Color { Color("GradientDangerousBottom") }
     
+    public static var gradientUnsafeTop: Color { Color("GradientUnsafeTop") }
+    
+    public static var gradientUnsafeBot: Color { Color("GradientUnsafeBottom") }
+    
+    public static var gradientCautionTop: Color { Color("GradientCautionTop") }
+                                                     
+    public static var gradientCautionBot: Color { Color("GradientCautionBottom") }
+    
+    public static var gradientLowRiskDecreaseTop: Color { Color("GradientLowRiskDecreaseTop") }
+    
+    public static var gradientLowRiskDecreaseBot: Color { Color("GradientLowRiskDecreaseBottom") }
+    
+    public static var gradientLowRiskSinergyTop: Color { Color("GradientLowRiskSinergyTop") }
+    
+    public static var gradientLowRisKSinergyBot: Color { Color("GradientLowRiskSinergyBottom") }
+    
+    public static var gradientLowRiskNoSinergyTop: Color { Color("GradientLowRiskNoSinergyTop") }
+    
+    public static var gradientLowRisKNoSinergyBot: Color { Color("GradientLowRiskNoSinergyBottom") }
+    
 }
