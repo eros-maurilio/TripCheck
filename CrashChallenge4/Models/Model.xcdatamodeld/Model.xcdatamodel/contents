@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SubstanceCombination" representedClassName="SubstanceCombination" syncable="YES" codeGenerationType="class">
+        <attribute name="interactionCategoryA" optional="YES" attributeType="String"/>
+        <attribute name="interactionCategoryB" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="toSubs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Substances" inverseName="toSubsComb" inverseEntity="Substances"/>
+    </entity>
+    <entity name="Substances" representedClassName="Substances" syncable="YES" codeGenerationType="class">
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="toSubsComb" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubstanceCombination" inverseName="toSubs" inverseEntity="SubstanceCombination"/>
+    </entity>
+    <elements>
+        <element name="SubstanceCombination" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Substances" positionX="-63" positionY="9" width="128" height="59"/>
+    </elements>
+</model>

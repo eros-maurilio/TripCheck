@@ -17,7 +17,9 @@ struct DrugInteraction: Codable, Hashable {
 struct Response: Codable {
     var err: Bool?
     var data: [DrugInteraction]?
+    var url: String?
 }
+
 
 class Api {
     func getSubstancesInfo(subsA: String, subsB: String,completion: @escaping ([DrugInteraction]) -> ()) {

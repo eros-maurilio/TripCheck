@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CombinationButtonView: View {
     @Binding var substances: [String]
+
     
     var body: some View {
         NavigationLink {
             DetailCombinationView(substances: substances)
-            
         } label: {
             HStack {
                 Spacer()

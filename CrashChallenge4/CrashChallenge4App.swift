@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct CrashChallenge4App: App {
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
