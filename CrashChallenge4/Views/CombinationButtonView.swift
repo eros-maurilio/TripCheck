@@ -10,7 +10,6 @@ import SwiftUI
 struct CombinationButtonView: View {
     @Binding var substances: [String]
 
-    
     var body: some View {
         NavigationLink {
             DetailCombinationView(substances: substances)
@@ -20,7 +19,7 @@ struct CombinationButtonView: View {
                 Image("symptom")
                     .resizable()
                     .aspectRatio(1, contentMode: .fit)
-                Text("Check Combination")
+                Text("Trip Check")
                     .scaledFont(name: PublicSans.bold.rawValue, size: 14)
                 Spacer()
             }
