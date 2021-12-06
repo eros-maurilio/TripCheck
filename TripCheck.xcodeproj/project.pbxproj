@@ -42,7 +42,6 @@
 		14FFE52A270F967F00B1AA02 /* PublicSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE518270F967E00B1AA02 /* PublicSans-BoldItalic.ttf */; };
 		14FFE52B270F967F00B1AA02 /* PublicSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE519270F967F00B1AA02 /* PublicSans-Italic.ttf */; };
 		14FFE52F270F9A7100B1AA02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE52E270F9A7100B1AA02 /* Extensions.swift */; };
-		95F367F3D7CC978FD316DCBC /* Pods_CrashChallenge4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36534BBCEC35B21692E338F6 /* Pods_CrashChallenge4.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +51,10 @@
 		14375D6227122FAD00260DE9 /* FlexibleTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleTagView.swift; sourceTree = "<group>"; };
 		14375D642712306100260DE9 /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
 		14375D66271230A600260DE9 /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
+		145DD8E7275E3E6600AF3FE8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14812AAE27133683000C298D /* JSONInteractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONInteractionViewModel.swift; sourceTree = "<group>"; };
 		14D6A596271073E400195697 /* DetailCombinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCombinationView.swift; sourceTree = "<group>"; };
-		14FFE4D2270F88C300B1AA02 /* CrashChallenge4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashChallenge4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14FFE4D2270F88C300B1AA02 /* TripCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FFE4D5270F88C300B1AA02 /* CrashChallenge4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashChallenge4App.swift; sourceTree = "<group>"; };
 		14FFE4D7270F88C300B1AA02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14FFE4D9270F88C600B1AA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,6 @@
 		14FFE4E8270F8D5E00B1AA02 /* DynamicTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTextModifier.swift; sourceTree = "<group>"; };
 		14FFE4EA270F912100B1AA02 /* TagModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModifier.swift; sourceTree = "<group>"; };
 		14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationButtonView.swift; sourceTree = "<group>"; };
-		14FFE507270F950000B1AA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14FFE508270F967D00B1AA02 /* PublicSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Black.ttf"; sourceTree = "<group>"; };
 		14FFE509270F967D00B1AA02 /* PublicSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Medium.ttf"; sourceTree = "<group>"; };
 		14FFE50A270F967D00B1AA02 /* PublicSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -83,9 +82,6 @@
 		14FFE518270F967E00B1AA02 /* PublicSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		14FFE519270F967F00B1AA02 /* PublicSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Italic.ttf"; sourceTree = "<group>"; };
 		14FFE52E270F9A7100B1AA02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		36534BBCEC35B21692E338F6 /* Pods_CrashChallenge4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrashChallenge4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3832CFE5C5512CE9D1A6AC5D /* Pods-CrashChallenge4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashChallenge4.debug.xcconfig"; path = "Target Support Files/Pods-CrashChallenge4/Pods-CrashChallenge4.debug.xcconfig"; sourceTree = "<group>"; };
-		A40FCDAD92D5A7FAA3F26BAC /* Pods-CrashChallenge4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashChallenge4.release.xcconfig"; path = "Target Support Files/Pods-CrashChallenge4/Pods-CrashChallenge4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F367F3D7CC978FD316DCBC /* Pods_CrashChallenge4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,25 +107,23 @@
 		14FFE4C9270F88C300B1AA02 = {
 			isa = PBXGroup;
 			children = (
-				14FFE4D4270F88C300B1AA02 /* CrashChallenge4 */,
+				14FFE4D4270F88C300B1AA02 /* TripCheck */,
 				14FFE4D3270F88C300B1AA02 /* Products */,
-				C115F501F6E27D5FA2610EB5 /* Pods */,
-				D0A829A48D3DA7CB69018D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		14FFE4D3270F88C300B1AA02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14FFE4D2270F88C300B1AA02 /* CrashChallenge4.app */,
+				14FFE4D2270F88C300B1AA02 /* TripCheck.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14FFE4D4270F88C300B1AA02 /* CrashChallenge4 */ = {
+		14FFE4D4270F88C300B1AA02 /* TripCheck */ = {
 			isa = PBXGroup;
 			children = (
-				14FFE507270F950000B1AA02 /* Info.plist */,
+				145DD8E7275E3E6600AF3FE8 /* Info.plist */,
 				14FFE4EE270F946100B1AA02 /* Fonts */,
 				14FFE4E7270F8D4700B1AA02 /* CustomViewsModifiers */,
 				14FFE4E4270F8AED00B1AA02 /* Views */,
@@ -142,7 +135,7 @@
 				14FFE4DB270F88C600B1AA02 /* Preview Content */,
 				14FFE52E270F9A7100B1AA02 /* Extensions.swift */,
 			);
-			path = CrashChallenge4;
+			path = TripCheck;
 			sourceTree = "<group>";
 		};
 		14FFE4DB270F88C600B1AA02 /* Preview Content */ = {
@@ -209,43 +202,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		C115F501F6E27D5FA2610EB5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3832CFE5C5512CE9D1A6AC5D /* Pods-CrashChallenge4.debug.xcconfig */,
-				A40FCDAD92D5A7FAA3F26BAC /* Pods-CrashChallenge4.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		D0A829A48D3DA7CB69018D0D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				36534BBCEC35B21692E338F6 /* Pods_CrashChallenge4.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14FFE4D1270F88C300B1AA02 /* CrashChallenge4 */ = {
+		14FFE4D1270F88C300B1AA02 /* TripCheck */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14FFE4E0270F88C600B1AA02 /* Build configuration list for PBXNativeTarget "CrashChallenge4" */;
+			buildConfigurationList = 14FFE4E0270F88C600B1AA02 /* Build configuration list for PBXNativeTarget "TripCheck" */;
 			buildPhases = (
-				098E42B7D7C794992421D7CD /* [CP] Check Pods Manifest.lock */,
 				14FFE4CE270F88C300B1AA02 /* Sources */,
 				14FFE4CF270F88C300B1AA02 /* Frameworks */,
 				14FFE4D0270F88C300B1AA02 /* Resources */,
-				55870BD0ABC0A6D3CAA44BC9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CrashChallenge4;
+			name = TripCheck;
 			productName = CrashChallenge4;
-			productReference = 14FFE4D2270F88C300B1AA02 /* CrashChallenge4.app */;
+			productReference = 14FFE4D2270F88C300B1AA02 /* TripCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14FFE4CD270F88C300B1AA02 /* Build configuration list for PBXProject "CrashChallenge4" */;
+			buildConfigurationList = 14FFE4CD270F88C300B1AA02 /* Build configuration list for PBXProject "TripCheck" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,7 +250,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14FFE4D1270F88C300B1AA02 /* CrashChallenge4 */,
+				14FFE4D1270F88C300B1AA02 /* TripCheck */,
 			);
 		};
 /* End PBXProject section */
@@ -310,48 +284,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		098E42B7D7C794992421D7CD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CrashChallenge4-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55870BD0ABC0A6D3CAA44BC9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CrashChallenge4/Pods-CrashChallenge4-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CrashChallenge4/Pods-CrashChallenge4-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrashChallenge4/Pods-CrashChallenge4-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14FFE4CE270F88C300B1AA02 /* Sources */ = {
@@ -497,17 +429,16 @@
 		};
 		14FFE4E1270F88C600B1AA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3832CFE5C5512CE9D1A6AC5D /* Pods-CrashChallenge4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CrashChallenge4/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripCheck/Preview Content\"";
 				DEVELOPMENT_TEAM = 4957F54262;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CrashChallenge4/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = /Users/erosmaurilio/Documents/CrashChallenge4/TripCheck/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -529,17 +460,16 @@
 		};
 		14FFE4E2270F88C600B1AA02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A40FCDAD92D5A7FAA3F26BAC /* Pods-CrashChallenge4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CrashChallenge4/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripCheck/Preview Content\"";
 				DEVELOPMENT_TEAM = 4957F54262;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CrashChallenge4/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = /Users/erosmaurilio/Documents/CrashChallenge4/TripCheck/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -562,7 +492,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14FFE4CD270F88C300B1AA02 /* Build configuration list for PBXProject "CrashChallenge4" */ = {
+		14FFE4CD270F88C300B1AA02 /* Build configuration list for PBXProject "TripCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14FFE4DE270F88C600B1AA02 /* Debug */,
@@ -571,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14FFE4E0270F88C600B1AA02 /* Build configuration list for PBXNativeTarget "CrashChallenge4" */ = {
+		14FFE4E0270F88C600B1AA02 /* Build configuration list for PBXNativeTarget "TripCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14FFE4E1270F88C600B1AA02 /* Debug */,
