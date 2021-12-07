@@ -1,49 +1,4 @@
-//
-//  HomeView.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 09/10/21.
-//
-
 import SwiftUI
-
-class ContentViewModel: ObservableObject {
-    @Published var substances = ["2C-T-X",
-                                 "2C-X",
-                                 "5-MeO-xxT",
-                                 "Alcohol",
-                                 "Amphetamines",
-                                 "Benzodiazepines",
-                                 "Caffeine",
-                                 "Cannabis",
-                                 "Cocaine",
-                                 "DMT",
-                                 "DOx",
-                                 "DXM",
-                                 "GHB/GBL",
-                                 "Ketamine",
-                                 "LSD",
-                                 "MAOIs",
-                                 "MDMA",
-                                 "MXE",
-                                 "Mescaline",
-                                 "Mushrooms",
-                                 "NBOMes",
-                                 "Nitrous",
-                                 "Opioids",
-                                 "SSRIs",
-                                 "Tramadol"]
-    @Published var spacing: CGFloat = 20
-    @Published var padding: CGFloat = 30
-    @Published var alignmentIndex = 0
-    
-    let alignments: [HorizontalAlignment] = [.leading, .center, .trailing]
-    
-    var alignment: HorizontalAlignment {
-        alignments[alignmentIndex]
-    }
-}
-
 
 struct HomeView: View {
     @ObservedObject var model = ContentViewModel()
@@ -58,18 +13,7 @@ struct HomeView: View {
     @Namespace var botID
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.clear]
-        
-        UINavigationBar
-            .appearance()
-            .titleTextAttributes = [NSAttributedString
-                                        .Key
-                                        .foregroundColor: UIColor(Color.deepBlue),
-                                    NSAttributedString
-                                        .Key
-                                        .font: UIFont(name: PublicSans.medium.rawValue, size: 17)!]
-        
-        UINavigationBar.appearance().barStyle = .default
+
     }
     
     var body: some View {
