@@ -22,7 +22,7 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
           availableWidth = size.width
         }
 
-      _FlexibleView(
+      AFlexibleView(
         availableWidth: availableWidth,
         data: data,
         spacing: spacing,

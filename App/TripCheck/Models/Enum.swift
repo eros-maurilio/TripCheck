@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum interactionNotice {
+enum InteractionNotice {
     case dangerous
     case caution
     case unsafe

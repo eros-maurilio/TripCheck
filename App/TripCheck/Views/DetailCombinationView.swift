@@ -15,7 +15,10 @@ struct DetailCombinationView: View {
     @State var bottomColor: Color = .clear
     @State var topColor: Color = .clear
     @State var isShowingAlert = false
-    var message = "The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision. Furthermore, all data comes from Tripsit."
+    var message = """
+        The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision.
+        Furthermore, all data comes from Tripsit.
+        """
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @GestureState private var dragOffset = CGSize.zero
