@@ -1,0 +1,6 @@
+framework module Pods_TripCheck {
+  umbrella header "Pods-TripCheck-umbrella.h"
+
+  export *
+  module * { export * }
+}

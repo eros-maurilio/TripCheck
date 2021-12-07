@@ -13,7 +13,12 @@
 		14375D6327122FAD00260DE9 /* FlexibleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D6227122FAD00260DE9 /* FlexibleTagView.swift */; };
 		14375D652712306100260DE9 /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D642712306100260DE9 /* _FlexibleView.swift */; };
 		14375D67271230A600260DE9 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D66271230A600260DE9 /* SizeReader.swift */; };
+		144C9DE7275F884800E8C91C /* fonts_swift5_swiftui.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 144C9DE6275F884800E8C91C /* fonts_swift5_swiftui.stencil */; };
+		144C9DEB275F8A5A00E8C91C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C9DEA275F8A5A00E8C91C /* Fonts.swift */; };
 		14812AAF27133683000C298D /* JSONInteractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14812AAE27133683000C298D /* JSONInteractionViewModel.swift */; };
+		148D76EF275E51AF00BF772E /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 148D76EE275E51AF00BF772E /* swiftgen.yml */; };
+		148D76F9275E607100BF772E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 148D76F7275E607100BF772E /* Localizable.strings */; };
+		148D76FF275E615F00BF772E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D76FE275E615F00BF772E /* Localizable.swift */; };
 		14D6A597271073E400195697 /* DetailCombinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A596271073E400195697 /* DetailCombinationView.swift */; };
 		14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */; };
 		14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D7270F88C300B1AA02 /* Application.swift */; };
@@ -42,6 +47,7 @@
 		14FFE52A270F967F00B1AA02 /* PublicSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE518270F967E00B1AA02 /* PublicSans-BoldItalic.ttf */; };
 		14FFE52B270F967F00B1AA02 /* PublicSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE519270F967F00B1AA02 /* PublicSans-Italic.ttf */; };
 		14FFE52F270F9A7100B1AA02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE52E270F9A7100B1AA02 /* Extensions.swift */; };
+		394CF7656F87F0C654CCE80D /* Pods_TripCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7657CFF33EBA8A16CBDFF9 /* Pods_TripCheck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +57,14 @@
 		14375D6227122FAD00260DE9 /* FlexibleTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleTagView.swift; sourceTree = "<group>"; };
 		14375D642712306100260DE9 /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
 		14375D66271230A600260DE9 /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
+		144C9DE6275F884800E8C91C /* fonts_swift5_swiftui.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fonts_swift5_swiftui.stencil; sourceTree = "<group>"; };
+		144C9DEA275F8A5A00E8C91C /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		145DD8E7275E3E6600AF3FE8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14812AAE27133683000C298D /* JSONInteractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONInteractionViewModel.swift; sourceTree = "<group>"; };
+		148D76EE275E51AF00BF772E /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		148D76F8275E607100BF772E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		148D76FE275E615F00BF772E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		14C5F70F275F986A00E16E3A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14D6A596271073E400195697 /* DetailCombinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCombinationView.swift; sourceTree = "<group>"; };
 		14FFE4D2270F88C300B1AA02 /* TripCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
@@ -82,6 +94,9 @@
 		14FFE518270F967E00B1AA02 /* PublicSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		14FFE519270F967F00B1AA02 /* PublicSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Italic.ttf"; sourceTree = "<group>"; };
 		14FFE52E270F9A7100B1AA02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		38231D716393C21382840E95 /* Pods-TripCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripCheck.release.xcconfig"; path = "Target Support Files/Pods-TripCheck/Pods-TripCheck.release.xcconfig"; sourceTree = "<group>"; };
+		40F5EEEFB25D857C00240AE4 /* Pods-TripCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripCheck.debug.xcconfig"; path = "Target Support Files/Pods-TripCheck/Pods-TripCheck.debug.xcconfig"; sourceTree = "<group>"; };
+		9D7657CFF33EBA8A16CBDFF9 /* Pods_TripCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				394CF7656F87F0C654CCE80D /* Pods_TripCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +114,8 @@
 		145DD8EC275E4A8700AF3FE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14A664A0275F80D80053B7A8 /* Template */,
+				148D76F7275E607100BF772E /* Localizable.strings */,
 				14FFE4D9270F88C600B1AA02 /* Assets.xcassets */,
 				14FFE4EE270F946100B1AA02 /* Fonts */,
 				14FFE4DB270F88C600B1AA02 /* Preview Content */,
@@ -165,11 +183,31 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		148D76FD275E610A00BF772E /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				148D76FE275E615F00BF772E /* Localizable.swift */,
+				144C9DEA275F8A5A00E8C91C /* Fonts.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		14A664A0275F80D80053B7A8 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				144C9DE6275F884800E8C91C /* fonts_swift5_swiftui.stencil */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
 		14FFE4C9270F88C300B1AA02 = {
 			isa = PBXGroup;
 			children = (
+				148D76EE275E51AF00BF772E /* swiftgen.yml */,
 				14FFE4D4270F88C300B1AA02 /* TripCheck */,
 				14FFE4D3270F88C300B1AA02 /* Products */,
+				BBB72CDF376DF7F8F92D904B /* Pods */,
+				612CD03F7A3F0E953F19DEDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +222,7 @@
 		14FFE4D4270F88C300B1AA02 /* TripCheck */ = {
 			isa = PBXGroup;
 			children = (
+				148D76FD275E610A00BF772E /* Generated */,
 				145DD8EC275E4A8700AF3FE8 /* Resources */,
 				145DD8ED275E4B0900AF3FE8 /* Sources */,
 				145DD8E7275E3E6600AF3FE8 /* Info.plist */,
@@ -258,6 +297,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		612CD03F7A3F0E953F19DEDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D7657CFF33EBA8A16CBDFF9 /* Pods_TripCheck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBB72CDF376DF7F8F92D904B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40F5EEEFB25D857C00240AE4 /* Pods-TripCheck.debug.xcconfig */,
+				38231D716393C21382840E95 /* Pods-TripCheck.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,6 +321,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14FFE4E0270F88C600B1AA02 /* Build configuration list for PBXNativeTarget "TripCheck" */;
 			buildPhases = (
+				CD47F82154DF574C16D252DF /* [CP] Check Pods Manifest.lock */,
+				148D76F0275E521300BF772E /* SwiftGen */,
 				14FFE4CE270F88C300B1AA02 /* Sources */,
 				14FFE4CF270F88C300B1AA02 /* Frameworks */,
 				14FFE4D0270F88C300B1AA02 /* Resources */,
@@ -286,7 +344,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					14FFE4D1270F88C300B1AA02 = {
 						CreatedOnToolsVersion = 13.0;
@@ -300,6 +358,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 14FFE4C9270F88C300B1AA02;
 			productRefGroup = 14FFE4D3270F88C300B1AA02 /* Products */;
@@ -324,14 +383,17 @@
 				14FFE52A270F967F00B1AA02 /* PublicSans-BoldItalic.ttf in Resources */,
 				14FFE51A270F967F00B1AA02 /* PublicSans-Black.ttf in Resources */,
 				14FFE4DA270F88C600B1AA02 /* Assets.xcassets in Resources */,
+				148D76EF275E51AF00BF772E /* swiftgen.yml in Resources */,
 				14FFE529270F967F00B1AA02 /* PublicSans-LightItalic.ttf in Resources */,
 				14FFE521270F967F00B1AA02 /* PublicSans-MediumItalic.ttf in Resources */,
 				14FFE51D270F967F00B1AA02 /* PublicSans-ExtraBoldItalic.ttf in Resources */,
 				14FFE527270F967F00B1AA02 /* PublicSans-Light.ttf in Resources */,
+				148D76F9275E607100BF772E /* Localizable.strings in Resources */,
 				14FFE52B270F967F00B1AA02 /* PublicSans-Italic.ttf in Resources */,
 				14FFE528270F967F00B1AA02 /* PublicSans-ExtraLight.ttf in Resources */,
 				14FFE51B270F967F00B1AA02 /* PublicSans-Medium.ttf in Resources */,
 				14FFE51F270F967F00B1AA02 /* PublicSans-ThinItalic.ttf in Resources */,
+				144C9DE7275F884800E8C91C /* fonts_swift5_swiftui.stencil in Resources */,
 				14FFE524270F967F00B1AA02 /* PublicSans-ExtraLightItalic.ttf in Resources */,
 				14FFE520270F967F00B1AA02 /* PublicSans-Thin.ttf in Resources */,
 				14FFE526270F967F00B1AA02 /* PublicSans-BlackItalic.ttf in Resources */,
@@ -340,6 +402,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		148D76F0275E521300BF772E /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
+		CD47F82154DF574C16D252DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripCheck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14FFE4CE270F88C300B1AA02 /* Sources */ = {
@@ -353,6 +458,7 @@
 				14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */,
 				14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */,
 				14FFE4E9270F8D5E00B1AA02 /* DynamicTextModifier.swift in Sources */,
+				144C9DEB275F8A5A00E8C91C /* Fonts.swift in Sources */,
 				14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */,
 				14375D67271230A600260DE9 /* SizeReader.swift in Sources */,
 				14FFE4E6270F8B4600B1AA02 /* TagView.swift in Sources */,
@@ -360,17 +466,31 @@
 				14375D6327122FAD00260DE9 /* FlexibleTagView.swift in Sources */,
 				14FFE52F270F9A7100B1AA02 /* Extensions.swift in Sources */,
 				14D6A597271073E400195697 /* DetailCombinationView.swift in Sources */,
+				148D76FF275E615F00BF772E /* Localizable.swift in Sources */,
 				14375D652712306100260DE9 /* _FlexibleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		148D76F7275E607100BF772E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				148D76F8275E607100BF772E /* Base */,
+				14C5F70F275F986A00E16E3A /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		14FFE4DE270F88C600B1AA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -432,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -485,6 +606,7 @@
 		};
 		14FFE4E1270F88C600B1AA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40F5EEEFB25D857C00240AE4 /* Pods-TripCheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +638,7 @@
 		};
 		14FFE4E2270F88C600B1AA02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38231D716393C21382840E95 /* Pods-TripCheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,40 @@
+# 1
+input_dir: TripCheck/Resources/
+# 2
+output_dir: TripCheck/Generated/
+
+## Strings
+strings:
+  inputs:
+    - Base.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: Localizable.swift
+      params:
+          enumName: Localizable
+                    
+## Fonts
+fonts:
+  inputs:
+    - Fonts/PublicSans-Black.ttf
+    - Fonts/PublicSans-BlackItalic.ttf
+    - Fonts/PublicSans-BoldItalic.ttf
+    - Fonts/PublicSans-ExtraBold.ttf
+    - Fonts/PublicSans-ExtraBoldItalic.ttf
+    - Fonts/PublicSans-ExtraLight.ttf
+    - Fonts/PublicSans-ExtraLightItalic.ttf
+    - Fonts/PublicSans-Italic.ttf
+    - Fonts/PublicSans-Light.ttf
+    - Fonts/PublicSans-LightItalic.ttf
+    - Fonts/PublicSans-Medium.ttf
+    - Fonts/PublicSans-MediumItalic.ttf
+    - Fonts/PublicSans-Regular.ttf
+    - Fonts/PublicSans-SemiBold.ttf
+    - Fonts/PublicSans-SemiBoldItalic.ttf
+    - Fonts/PublicSans-Thin.ttf
+    - Fonts/PublicSans-ThinItalic.ttf
+  outputs:
+    templatePath: TripCheck/Resources/Template/fonts_swift5_swiftui.stencil
+    output: Fonts.swift
+
