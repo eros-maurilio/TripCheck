@@ -1,5 +1,5 @@
 input_dir: ../App/TripCheck/Resources/
-output_dir: ../App/TripCheck/Generated/
+output_dir: ../App/TripCheck/Resources/Generated
 strings:
   - inputs: Base.lproj
     filter: .+\.strings$
