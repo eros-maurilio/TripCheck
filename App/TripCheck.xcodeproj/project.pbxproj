@@ -10,6 +10,7 @@
 		140E06732715D30F007B9022 /* InteractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E06722715D30F007B9022 /* InteractionModel.swift */; };
 		142EEA04275FF61500F9C553 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EEA03275FF61500F9C553 /* HomeViewModel.swift */; };
 		142EEA07275FF77F00F9C553 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EEA06275FF77F00F9C553 /* AppDelegate.swift */; };
+		14126BF8275FE539009ADEC7 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14126BF7275FE539009ADEC7 /* Assets.swift */; };
 		14375D5F2711FAEB00260DE9 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D5E2711FAEB00260DE9 /* Enum.swift */; };
 		14375D6127122BE600260DE9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D6027122BE600260DE9 /* HomeView.swift */; };
 		14375D6327122FAD00260DE9 /* FlexibleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D6227122FAD00260DE9 /* FlexibleTagView.swift */; };
@@ -54,6 +55,7 @@
 		140E06722715D30F007B9022 /* InteractionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionModel.swift; sourceTree = "<group>"; };
 		142EEA03275FF61500F9C553 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		142EEA06275FF77F00F9C553 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14126BF7275FE539009ADEC7 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		14375D5E2711FAEB00260DE9 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		14375D6027122BE600260DE9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14375D6227122FAD00260DE9 /* FlexibleTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleTagView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				148D76FE275E615F00BF772E /* Localizable.swift */,
 				144C9DEA275F8A5A00E8C91C /* Fonts.swift */,
+				14126BF7275FE539009ADEC7 /* Assets.swift */,
 			);
 			name = Generated;
 			path = ../Generated;
@@ -339,11 +342,11 @@
 			buildConfigurationList = 14FFE4E0270F88C600B1AA02 /* Build configuration list for PBXNativeTarget "TripCheck" */;
 			buildPhases = (
 				CD47F82154DF574C16D252DF /* [CP] Check Pods Manifest.lock */,
+				14126BF6275FDBD0009ADEC7 /* SwiftLint */,
 				148D76F0275E521300BF772E /* SwiftGen */,
 				14FFE4CE270F88C300B1AA02 /* Sources */,
 				14FFE4CF270F88C300B1AA02 /* Frameworks */,
 				14FFE4D0270F88C300B1AA02 /* Resources */,
-				14126BF6275FDBD0009ADEC7 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -436,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config ../config/swiftlint.yml\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config ../Config/swiftlint.yml\n";
 		};
 		148D76F0275E521300BF772E /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -495,6 +498,7 @@
 				14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */,
 				14FFE4E9270F8D5E00B1AA02 /* DynamicTextModifier.swift in Sources */,
 				144C9DEB275F8A5A00E8C91C /* Fonts.swift in Sources */,
+				14126BF8275FE539009ADEC7 /* Assets.swift in Sources */,
 				14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */,
 				14375D67271230A600260DE9 /* SizeReader.swift in Sources */,
 				14FFE4E6270F8B4600B1AA02 /* TagView.swift in Sources */,
