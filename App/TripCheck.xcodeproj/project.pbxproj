@@ -409,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config ../config/swiftlint.yml\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config ../Config/swiftlint.yml\n";
 		};
 		148D76F0275E521300BF772E /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
