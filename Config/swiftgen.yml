@@ -1,17 +1,12 @@
-# 1
-input_dir: TripCheck/Resources/
-# 2
-output_dir: TripCheck/Generated/
-
-## Strings
+input_dir: ../App/TripCheck/Resources/
+output_dir: ../App/TripCheck/Generated/
 strings:
-  inputs:
-    - Base.lproj
-  filter: .+\.strings$
-  outputs:
-    - templateName: structured-swift5
-      output: Localizable.swift
-      params:
+  - inputs: Base.lproj
+    filter: .+\.strings$
+    outputs:
+      - templateName: structured-swift5
+        output: Localizable.swift
+        params:
           enumName: Localizable
                     
 ## Fonts
@@ -35,6 +30,6 @@ fonts:
     - Fonts/PublicSans-Thin.ttf
     - Fonts/PublicSans-ThinItalic.ttf
   outputs:
-    templatePath: TripCheck/Resources/Template/fonts_swift5_swiftui.stencil
+    templatePath: Template/fonts_swift5_swiftui.stencil
     output: Fonts.swift
 
