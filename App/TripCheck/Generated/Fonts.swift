@@ -14,6 +14,7 @@ extension Font {
   public enum PublicSansStyle: String {
     case black = "PublicSans-Black"
     case blackItalic = "PublicSans-BlackItalic"
+    case bold = "PublicSans-Bold"
     case boldItalic = "PublicSans-BoldItalic"
     case extraBold = "PublicSans-ExtraBold"
     case extraBoldItalic = "PublicSans-ExtraBoldItalic"
