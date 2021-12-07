@@ -4,17 +4,11 @@ struct HomeView: View {
     @ObservedObject var model = ContentViewModel()
     @State var isSelected = false
     @State var isSelected2 = true
-    private var gradient = [Color.gradientHomeTop, Color.gradientHomeBot]
+    @State private var gradient = [Color.homeTop, Color.homeBottom]
     @State var opacityStyle: CGFloat = 0
     @State var substances = [String]()
     @State var isShowing = false
-    @State var bottomColor: Color = .gradientHomeBot
-    @State var topColor: Color = .gradientHomeTop
     @Namespace var botID
-    
-    init() {
-
-    }
     
     var body: some View {
         ScrollView {
@@ -22,7 +16,7 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 0){
                     Text("Harm Reduction for all")
                         .scaledFont(name: PublicSans.bold.rawValue, size: 36)
-                        .foregroundColor(.deepBlue)
+                        .foregroundColor(.tripBlue)
                         .padding(.top, -50)
                     HStack {
                         Spacer()
@@ -31,6 +25,7 @@ struct HomeView: View {
                     Text("Select two substances to see how they interact")
                         .scaledFont(name: PublicSans.medium.rawValue, size: 17)
                         .padding(.top, 25)
+    
                     
                 }
                 .padding(.horizontal, 40)
@@ -72,7 +67,7 @@ struct HomeView: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .fill(LinearGradient(colors: [topColor.opacity(0.01), bottomColor], startPoint: .top, endPoint: .bottom))
+//                    .fill(LinearGradient(colors: [Assets.Colors.blue.opacity(0.01), ], startPoint: .top, endPoint: .bottom))
                     .frame(width: UIScreen.main.bounds.size.width, height: 60, alignment: .bottom)
             }
                 .edgesIgnoringSafeArea(.all))

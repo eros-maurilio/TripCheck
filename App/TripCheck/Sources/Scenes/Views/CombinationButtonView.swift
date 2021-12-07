@@ -25,7 +25,7 @@ struct CombinationButtonView: View {
             }
             .foregroundColor(.white)
             .padding(.vertical, 12)
-            .background(Color.deepBlue)
+            .background(Color.tripBlue)
             .cornerRadius(5)
         }
         

@@ -15,8 +15,8 @@ struct TagModifierSelected: ViewModifier {
             .foregroundColor(.white)
             .scaledFont(name: PublicSans.regular.rawValue, size: 17)
             .padding(10)
-            .background(Color.deepBlue.cornerRadius(5))
-            .shadow(color: .shadowColor.opacity(0.15), radius: 10, x: 0, y: 4)
+            .background(Color.tripBlue.cornerRadius(5))
+            .shadow(color: .shadow.opacity(0.15), radius: 10, x: 0, y: 4)
     }
 }
 
@@ -28,7 +28,7 @@ struct TagModifierNotSelected: ViewModifier {
             .scaledFont(name: PublicSans.regular.rawValue, size: 17)
             .padding(10)
             .background(Color.white.cornerRadius(5))
-            .shadow(color: .shadowColor.opacity(0.15), radius: 10, x: 0, y: 4)
+            .shadow(color: .shadow.opacity(0.15), radius: 10, x: 0, y: 4)
     }
 }
 
