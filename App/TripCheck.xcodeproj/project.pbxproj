@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		140E06732715D30F007B9022 /* InteractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E06722715D30F007B9022 /* InteractionModel.swift */; };
+		142EEA04275FF61500F9C553 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EEA03275FF61500F9C553 /* HomeViewModel.swift */; };
+		142EEA07275FF77F00F9C553 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EEA06275FF77F00F9C553 /* AppDelegate.swift */; };
 		14375D5F2711FAEB00260DE9 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D5E2711FAEB00260DE9 /* Enum.swift */; };
 		14375D6127122BE600260DE9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D6027122BE600260DE9 /* HomeView.swift */; };
 		14375D6327122FAD00260DE9 /* FlexibleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14375D6227122FAD00260DE9 /* FlexibleTagView.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		140E06722715D30F007B9022 /* InteractionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionModel.swift; sourceTree = "<group>"; };
+		142EEA03275FF61500F9C553 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		142EEA06275FF77F00F9C553 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14375D5E2711FAEB00260DE9 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		14375D6027122BE600260DE9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14375D6227122FAD00260DE9 /* FlexibleTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleTagView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142EEA01275FF59A00F9C553 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				142EEA05275FF62000F9C553 /* Model */,
+				142EEA02275FF5FD00F9C553 /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		142EEA02275FF5FD00F9C553 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				14375D6027122BE600260DE9 /* HomeView.swift */,
+				142EEA03275FF61500F9C553 /* HomeViewModel.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		142EEA05275FF62000F9C553 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		145DD8EC275E4A8700AF3FE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +164,7 @@
 			children = (
 				14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */,
 				14FFE4D7270F88C300B1AA02 /* Application.swift */,
+				142EEA06275FF77F00F9C553 /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -142,7 +172,6 @@
 		14812AAD271335DA000C298D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				14375D6027122BE600260DE9 /* HomeView.swift */,
 				14812AAE27133683000C298D /* JSONInteractionViewModel.swift */,
 			);
 			path = ViewModel;
@@ -175,6 +204,8 @@
 		148D76ED275E4D8800BF772E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				142EEA01275FF59A00F9C553 /* Home */,
+				14FFE4E4270F8AED00B1AA02 /* Views */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -213,7 +244,6 @@
 				145DD8EC275E4A8700AF3FE8 /* Resources */,
 				145DD8ED275E4B0900AF3FE8 /* Sources */,
 				145DD8E7275E3E6600AF3FE8 /* Info.plist */,
-				14FFE4E4270F8AED00B1AA02 /* Views */,
 				14FFE4E3270F8AE600B1AA02 /* Models */,
 				14812AAD271335DA000C298D /* ViewModel */,
 			);
@@ -457,8 +487,10 @@
 			files = (
 				14FFE4EB270F912100B1AA02 /* TagModifier.swift in Sources */,
 				14375D6127122BE600260DE9 /* HomeView.swift in Sources */,
+				142EEA07275FF77F00F9C553 /* AppDelegate.swift in Sources */,
 				140E06732715D30F007B9022 /* InteractionModel.swift in Sources */,
 				14375D5F2711FAEB00260DE9 /* Enum.swift in Sources */,
+				142EEA04275FF61500F9C553 /* HomeViewModel.swift in Sources */,
 				14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */,
 				14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */,
 				14FFE4E9270F8D5E00B1AA02 /* DynamicTextModifier.swift in Sources */,
