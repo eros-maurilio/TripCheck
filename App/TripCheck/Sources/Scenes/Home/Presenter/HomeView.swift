@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var model = ContentViewModel()
+    @ObservedObject var model = HomeViewModel()
     @State var isSelected = false
     @State var isSelected2 = true
     @State var substances = [String]()
@@ -38,7 +38,7 @@ struct HomeView: View {
         }
         
         if substances.count == 2 {
-            substances.remove(at: 0)
+            substances.removeFirst()
             print(substances)
         }
         
@@ -65,16 +65,16 @@ struct HomeView: View {
     private var tags: some View {
         FlexibleView(data: typeOf.substances) { item in
             Button {
-                substanceSelection(name: item)
+                model.substanceSelection(substance: item)
                 withAnimation {
-                    if substances.count == 2 {
+                    if model.selectedSubstances.count == 2 {
                         isShowing = true
                     } else {
                         isShowing = false
                     }
                 }
             } label: {
-                TagView(substance: item, isSelected: substances.contains(item) ? $isSelected2 : $isSelected)
+                TagView(substance: item, isSelected: model.selectedSubstances.contains(item) ? $isSelected2 : $isSelected)
             }
         }
                      .standardHorizontalPadding()
@@ -82,7 +82,7 @@ struct HomeView: View {
     }
     
     private var button: some View {
-        CombinationButtonView(substances: $substances)
+        CombinationButtonView(substances: $model.selectedSubstances)
             .frame(height: UIScreen.main.bounds.size.height / 16)
             .id(botID)
             .standardBottomPadding()
