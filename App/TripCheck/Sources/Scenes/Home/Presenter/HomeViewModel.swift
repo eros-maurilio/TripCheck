@@ -27,7 +27,7 @@ class ContentViewModel: ObservableObject {
                                  "SSRIs",
                                  "Tramadol"]
     @Published var spacing: CGFloat = 20
-    @Published var padding: CGFloat = 30
+    @Published var padding: CGFloat = 20
     @Published var alignmentIndex = 0
     
     let alignments: [HorizontalAlignment] = [.leading, .center, .trailing]

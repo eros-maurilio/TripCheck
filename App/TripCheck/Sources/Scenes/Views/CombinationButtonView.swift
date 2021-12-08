@@ -20,12 +20,11 @@ struct CombinationButtonView: View {
                     .resizable()
                     .aspectRatio(1, contentMode: .fit)
                 Text("Trip Check")
-                    .scaledFont(name: PublicSans.bold.rawValue, size: 14)
                 Spacer()
             }
             .foregroundColor(.white)
             .padding(.vertical, 12)
-            .background(Color.deepBlue)
+            .background(Color.tripBlue)
             .cornerRadius(5)
         }
         

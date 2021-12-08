@@ -11,9 +11,15 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Localizable {
 
-  internal enum Teste {
-    /// dsa;dal;sd;
-    internal static let test = Localizable.tr("Localizable", "teste.test")
+  internal enum Home {
+    internal enum Subtitle {
+      /// Select two substances to see how they interact
+      internal static let text = Localizable.tr("Localizable", "home.subtitle.text")
+    }
+    internal enum Title {
+      /// Harm Reduction for all
+      internal static let text = Localizable.tr("Localizable", "home.title.text")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -8,7 +8,7 @@ import SwiftUI
 
 struct DetailCombinationView: View {
     @State private var icons = ["death", "alert", "heart", "decrease", "sinergy", "stable"]
-    @State private var gradient = [Color.gradientHomeTop, Color.gradientHomeBot]
+    @State private var gradient = [Color.homeTop, Color.homeBottom]
     @State var substances: [String]
     @State var foreColor: Color = .clear
     @StateObject var jsonModel = JSONInteractionViewModel()
@@ -48,7 +48,7 @@ struct DetailCombinationView: View {
                                 Text("\(substances[1])")
                             }
                             .foregroundColor(foreColor)
-                            .scaledFont(name: PublicSans.semiBold.rawValue, size: 24)
+                            .font(.publicSans(.semiBold, size: 24, relativeTo: .title)) // TODO: Change size to metrics
                             
                             Spacer()
                         }
@@ -58,60 +58,60 @@ struct DetailCombinationView: View {
                             Components(icon: $icons[0], status: item.status!.uppercased(), note: item.note)
                                 .foregroundColor(.white)
                                 .onAppear {
-                                    gradient = [Color.gradientDangerTop, Color.gradientDangerBot]
+                                    gradient = [Color.tripBlue, Color.tripBlue]
                                     foreColor = .white
-                                    topColor = .gradientDangerTop
-                                    bottomColor = .gradientDangerBot
+                                    topColor = .tripBlue
+                                    bottomColor = .tripBlue
                                 }
                             
                         case "Caution":
                             Components(icon: $icons[1], status: item.status!, note: item.note)
                                 .foregroundColor(.black)
                                 .onAppear {
-                                    gradient = [Color.gradientCautionTop, Color.gradientCautionBot]
+                                    gradient = [Color.tripBlue, Color.tripBlue]
                                     foreColor = .black
-                                    topColor = .gradientCautionTop
-                                    bottomColor = .gradientCautionBot
+                                    topColor = .tripBlue
+                                    bottomColor = .tripBlue
                                 }
                             
                         case "Unsafe":
                             Components(icon: $icons[2], status: item.status!, note: item.note)
                                 .foregroundColor(.white)
                                 .onAppear {
-                                    gradient = [Color.gradientUnsafeTop, Color.gradientUnsafeBot]
+                                    gradient = [Color.tripBlue, Color.tripBlue]
                                     foreColor = .white
-                                    topColor = .gradientUnsafeTop
-                                    bottomColor = .gradientUnsafeBot
+                                    topColor = .tripBlue
+                                    bottomColor = .tripBlue
                                 }
                             
                         case "Low Risk & Decrease":
                             Components(icon: $icons[3], status: item.status!, note: item.note)
                                 .foregroundColor(.black)
                                 .onAppear {
-                                    gradient = [Color.gradientLowRiskDecreaseTop, Color.gradientLowRiskDecreaseTop]
+                                    gradient = [Color.tripBlue, Color.tripBlue]
                                     foreColor = .black
-                                    topColor = .gradientLowRiskDecreaseTop
-                                    bottomColor = .gradientLowRiskDecreaseBot
+                                    topColor = .tripBlue
+                                    bottomColor = .tripBlue
                                 }
                             
                         case "Low Risk & Synergy":
                             Components(icon: $icons[4], status: item.status!, note: item.note)
                                 .foregroundColor(.white)
                                 .onAppear {
-                                    gradient = [Color.gradientLowRiskSinergyTop, Color.gradientLowRisKSinergyBot]
+                                    gradient = [Color.tripBlue, Color.tripBlue]
                                     foreColor = .white
-                                    topColor = .gradientLowRiskSinergyTop
-                                    bottomColor = .gradientLowRisKSinergyBot
+                                    topColor = .tripBlue
+                                    bottomColor = .tripBlue
                                 }
                             
                         case "Low Risk & No Synergy":
                             Components(icon: $icons[5], status: item.status!, note: item.note)
                                 .foregroundColor(.black)
                                 .onAppear {
-                                    gradient = [Color.gradientLowRiskNoSinergyTop, Color.gradientLowRisKNoSinergyBot]
+                                    gradient = [Color.tripBlue, Color.tripBlue]
                                     foreColor = .black
-                                    topColor = .gradientLowRiskNoSinergyTop
-                                    bottomColor = .gradientLowRisKNoSinergyBot
+                                    topColor = .tripBlue
+                                    bottomColor = .tripBlue
                                 }
                             
                         default:
@@ -173,7 +173,7 @@ struct DetailCombinationView: View {
                 Text("\(substance1) +")
                 Text("\(substance2)")
             }
-            .scaledFont(name: PublicSans.semiBold.rawValue, size: 24)
+            .font(.publicSans(.semiBold, size: 24, relativeTo: .title)) // TODO: Change size to metrics
         }
     }
 }
@@ -188,7 +188,7 @@ struct WarningType: View {
                 .aspectRatio(1, contentMode: .fit)
             Text(status!)
                 .fixedSize(horizontal: false, vertical: true)
-                .font(.custom(PublicSans.bold.rawValue, size: 36))
+                .font(.publicSans(.bold, size: 36, relativeTo: .title)) // TODO: Change size to metrics
                 .padding(.top, 7)
             Spacer()
         }
@@ -203,11 +203,11 @@ struct Description: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Note")
-                .scaledFont(name: PublicSans.bold.rawValue, size: 18)
+                .font(.publicSans(.bold, size: 18, relativeTo: .title)) // TODO: Change size to metrics
                 .padding(.bottom, 25)
             
             Text(note ?? "There is no more information available.")
-                .scaledFont(name: PublicSans.light.rawValue, size: 17)
+                .font(.publicSans(.light, size: 17, relativeTo: .title)) // TODO: Change size to metrics
                 .lineSpacing(6)
         }
     }

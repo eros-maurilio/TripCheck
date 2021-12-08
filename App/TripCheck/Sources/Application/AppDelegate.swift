@@ -10,10 +10,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 .appearance()
                 .titleTextAttributes = [NSAttributedString
                                             .Key
-                                            .foregroundColor: UIColor(Color.deepBlue),
-                                        NSAttributedString
-                                            .Key
-                                            .font: UIFont(name: PublicSans.medium.rawValue, size: 17)!]
+                                            .foregroundColor: UIColor(Color.tripBlue)]
+//                                           ,
+//                                        NSAttributedString
+//                                            .Key
+                                            // FIXME: Add enum font here ->  .font: UIFont(name: PublicSans.medium.rawValue, size: 17)!]
             
             UINavigationBar.appearance().barStyle = .default
             
