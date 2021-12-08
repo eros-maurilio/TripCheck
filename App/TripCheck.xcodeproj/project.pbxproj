@@ -28,7 +28,6 @@
 		14FFE4DA270F88C600B1AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE4D9270F88C600B1AA02 /* Assets.xcassets */; };
 		14FFE4DD270F88C600B1AA02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE4DC270F88C600B1AA02 /* Preview Assets.xcassets */; };
 		14FFE4E6270F8B4600B1AA02 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4E5270F8B4600B1AA02 /* TagView.swift */; };
-		14FFE4E9270F8D5E00B1AA02 /* DynamicTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4E8270F8D5E00B1AA02 /* DynamicTextModifier.swift */; };
 		14FFE4EB270F912100B1AA02 /* TagModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4EA270F912100B1AA02 /* TagModifier.swift */; };
 		14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */; };
 		14FFE51A270F967F00B1AA02 /* PublicSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE508270F967D00B1AA02 /* PublicSans-Black.ttf */; };
@@ -78,7 +77,6 @@
 		14FFE4D9270F88C600B1AA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FFE4DC270F88C600B1AA02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FFE4E5270F8B4600B1AA02 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		14FFE4E8270F8D5E00B1AA02 /* DynamicTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTextModifier.swift; sourceTree = "<group>"; };
 		14FFE4EA270F912100B1AA02 /* TagModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModifier.swift; sourceTree = "<group>"; };
 		14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationButtonView.swift; sourceTree = "<group>"; };
 		14FFE508270F967D00B1AA02 /* PublicSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Black.ttf"; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 		14FFE4E7270F8D4700B1AA02 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				14FFE4E8270F8D5E00B1AA02 /* DynamicTextModifier.swift */,
 				14FFE4EA270F912100B1AA02 /* TagModifier.swift */,
 			);
 			path = Modifiers;
@@ -503,7 +500,6 @@
 				1447835427600B800025C1B1 /* LayoutMetrics.swift in Sources */,
 				14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */,
 				14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */,
-				14FFE4E9270F8D5E00B1AA02 /* DynamicTextModifier.swift in Sources */,
 				144C9DEB275F8A5A00E8C91C /* Fonts.swift in Sources */,
 				14126BF8275FE539009ADEC7 /* Assets.swift in Sources */,
 				14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */,

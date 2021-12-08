@@ -48,7 +48,7 @@ struct DetailCombinationView: View {
                                 Text("\(substances[1])")
                             }
                             .foregroundColor(foreColor)
-                            .scaledFont(name: PublicSans.semiBold.rawValue, size: 24)
+                            .font(.publicSans(.semiBold, size: 24, relativeTo: .title)) // TODO: Change size to metrics
                             
                             Spacer()
                         }
@@ -173,7 +173,7 @@ struct DetailCombinationView: View {
                 Text("\(substance1) +")
                 Text("\(substance2)")
             }
-            .scaledFont(name: PublicSans.semiBold.rawValue, size: 24)
+            .font(.publicSans(.semiBold, size: 24, relativeTo: .title)) // TODO: Change size to metrics
         }
     }
 }
@@ -188,7 +188,7 @@ struct WarningType: View {
                 .aspectRatio(1, contentMode: .fit)
             Text(status!)
                 .fixedSize(horizontal: false, vertical: true)
-                .font(.custom(PublicSans.bold.rawValue, size: 36))
+                .font(.publicSans(.bold, size: 36, relativeTo: .title)) // TODO: Change size to metrics
                 .padding(.top, 7)
             Spacer()
         }
@@ -203,11 +203,11 @@ struct Description: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Note")
-                .scaledFont(name: PublicSans.bold.rawValue, size: 18)
+                .font(.publicSans(.bold, size: 18, relativeTo: .title)) // TODO: Change size to metrics
                 .padding(.bottom, 25)
             
             Text(note ?? "There is no more information available.")
-                .scaledFont(name: PublicSans.light.rawValue, size: 17)
+                .font(.publicSans(.light, size: 17, relativeTo: .title)) // TODO: Change size to metrics
                 .lineSpacing(6)
         }
     }
