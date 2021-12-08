@@ -13,25 +13,21 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             ScrollViewReader { value in
-                VStack(alignment: .leading, spacing: 0){
-                    Text("Harm Reduction for all")
-                        .scaledFont(name: PublicSans.bold.rawValue, size: 36)
+                VStack(alignment: .leading, spacing: LayoutMetrics.Design.Padding.standard) {
+                    Text(Localizable.Home.Title.text)
+                        .font(.publicSans(.bold, size: LayoutMetrics.Design.Text.largeTitle, relativeTo: .title))
                         .foregroundColor(.tripBlue)
-                        .padding(.top, -50)
-                    HStack {
-                        Spacer()
-                    }
-                    
-                    Text("Select two substances to see how they interact")
-                        .scaledFont(name: PublicSans.medium.rawValue, size: 17)
-                        .padding(.top, 25)
-    
-                    
-                }
-                .padding(.horizontal, 40)
-                .padding(.bottom, 40)
+                    .padding(.top, -50) // FIXME: Coordinators?
                 
-                FlexibleView(data: model.substances, spacing: model.spacing, alignment: model.alignment) { item in
+                Text(Localizable.Home.Subtitle.text)
+                        .font(.publicSans(.medium, size: LayoutMetrics.Design.Text.body, relativeTo: .body))
+                }
+                .homeTitleFrame()
+                .standardBottomPadding()
+                
+                FlexibleView(data: model.substances,
+                             spacing: LayoutMetrics.Design.Padding.standard,
+                             alignment: model.alignment) { item in
                     Button {
                         substanceSelection(name: item)
                         withAnimation {
@@ -41,19 +37,19 @@ struct HomeView: View {
                                 isShowing = false
                             }
                         }
-                        
                     } label: {
                         TagView(substance: item, isSelected: substances.contains(item) ? $isSelected2 : $isSelected)
                     }
-                    
                 }
-                .padding(.horizontal, model.padding)
+                .standardHorizontalPadding()
+                .standardBottomPadding()
                 
                 if isShowing {
                     CombinationButtonView(substances: $substances)
                         .frame(height: UIScreen.main.bounds.size.height / 16)
                         .id(botID)
-                        .padding(30)
+                        .standardBottomPadding()
+                        .standardHorizontalPadding()
                         .onAppear {
                             withAnimation {
                                 value.scrollTo(botID, anchor: .bottom)
@@ -62,17 +58,16 @@ struct HomeView: View {
                 }
             }
         }
-        .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
+        .backgroundGradient(Style.Gradient.home)
         .overlay(
             VStack {
                 Spacer()
                 Rectangle()
-//                    .fill(LinearGradient(colors: [Assets.Colors.blue.opacity(0.01), ], startPoint: .top, endPoint: .bottom))
+                    .fill(LinearGradient(colors: Style.BottomGradient.home, startPoint: .top, endPoint: .bottom))
                     .frame(width: UIScreen.main.bounds.size.width, height: 60, alignment: .bottom)
             }
                 .edgesIgnoringSafeArea(.all))
-        
-        .navigationTitle("Harm Reduction for all")
+        .navigationTitle(Localizable.Home.Title.text)
     }
     
     func substanceSelection(name: String) {
