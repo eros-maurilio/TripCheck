@@ -6,19 +6,12 @@ protocol HomeViewModelProtocol: ObservableObject {
 
 final class HomeViewModel: HomeViewModelProtocol {
     @Published var selectedSubstances: [String] = []
+    @Published var buttonState: Bool = false
     let maxNumberOfSubstances = 2
-    
-    private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
-    private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
-    
-    func substanceSelection(substance: String) {
-        if Filter(substance) { return }
-        
-        Remove(substance)
 
-        Append(substance)
+    private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
     
-    }
+    private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
     
     private func Filter(_ substance: String) -> Bool {
         if selectedSubstances.contains(substance) {
@@ -40,4 +33,18 @@ final class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
+    func substanceSelection(substance: String) {
+        if Filter(substance) { return }
+        Remove(substance)
+        Append(substance)
+        
+    }
+    
+    func showButton() {
+        if substancesCountEquals {
+            buttonState = true
+        } else {
+            buttonState = false
+        }
+    }
 }

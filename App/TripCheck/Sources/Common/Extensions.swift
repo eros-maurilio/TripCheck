@@ -35,4 +35,12 @@ extension View {
             }
                 .edgesIgnoringSafeArea(.all))
     }
+    
+    func scroll(_ currentPosition: ScrollViewProxy,to id: Namespace.ID) -> some View {
+        self.onAppear {
+            withAnimation {
+                currentPosition.scrollTo(id, anchor: .bottom)
+            }
+        }
+    }
 }
