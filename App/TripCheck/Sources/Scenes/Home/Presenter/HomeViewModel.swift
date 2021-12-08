@@ -1,38 +1,50 @@
 import SwiftUI
 
-class ContentViewModel: ObservableObject {
-    @Published var substances = ["2C-T-X",
-                                 "2C-X",
-                                 "5-MeO-xxT",
-                                 "Alcohol",
-                                 "Amphetamines",
-                                 "Benzodiazepines",
-                                 "Caffeine",
-                                 "Cannabis",
-                                 "Cocaine",
-                                 "DMT",
-                                 "DOx",
-                                 "DXM",
-                                 "GHB/GBL",
-                                 "Ketamine",
-                                 "LSD",
-                                 "MAOIs",
-                                 "MDMA",
-                                 "MXE",
-                                 "Mescaline",
-                                 "Mushrooms",
-                                 "NBOMes",
-                                 "Nitrous",
-                                 "Opioids",
-                                 "SSRIs",
-                                 "Tramadol"]
-    @Published var spacing: CGFloat = 20
-    @Published var padding: CGFloat = 20
-    @Published var alignmentIndex = 0
+protocol HomeViewModelProtocol: ObservableObject {
+    func substanceSelection(substance: String)
+}
+
+final class HomeViewModel: HomeViewModelProtocol {
+    @Published var selectedSubstances: [String] = []
+    @Published var buttonState: Bool = false
+    let maxNumberOfSubstances = 2
+
+    private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
     
-    let alignments: [HorizontalAlignment] = [.leading, .center, .trailing]
+    private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
     
-    var alignment: HorizontalAlignment {
-        alignments[alignmentIndex]
+    private func Filter(_ substance: String) -> Bool {
+        if selectedSubstances.contains(substance) {
+            selectedSubstances = selectedSubstances.filter { $0 != substance}
+             return true
+        }
+        return false
+    }
+    
+    private func Remove(_ substance: String) {
+        if substancesCountEquals {
+            selectedSubstances.removeFirst()
+        }
+    }
+    
+    private func Append(_ substance: String) {
+        if substancesCountLessThen {
+            selectedSubstances.append(substance)
+        }
+    }
+    
+    func substanceSelection(substance: String) {
+        if Filter(substance) { return }
+        Remove(substance)
+        Append(substance)
+        
+    }
+    
+    func showButton() {
+        if substancesCountEquals {
+            buttonState = true
+        } else {
+            buttonState = false
+        }
     }
 }
