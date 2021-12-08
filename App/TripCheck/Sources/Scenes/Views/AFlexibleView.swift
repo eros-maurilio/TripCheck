@@ -10,9 +10,9 @@ import SwiftUI
 struct AFlexibleView<Data: Collection, Content: View>: View where Data.Element: Hashable {
   let availableWidth: CGFloat
   let data: Data
-  let spacing: CGFloat
-  let alignment: HorizontalAlignment
-  let content: (Data.Element) -> Content
+   private let spacing: CGFloat = LayoutMetrics.Design.Padding.standard
+    let content: (Data.Element) -> Content
+    let alignment: HorizontalAlignment
   @State var elementsSize: [Data.Element: CGSize] = [:]
 
   var body : some View {

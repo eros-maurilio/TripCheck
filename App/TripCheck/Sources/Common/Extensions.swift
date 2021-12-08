@@ -24,4 +24,15 @@ extension View {
     func backgroundGradient(_ style: [Color]) -> some View {
         self.background(LinearGradient(colors: style, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
     }
+    
+    func bottomGradient(_ style: [Color]) -> some View {
+        self.overlay(
+            VStack {
+                Spacer()
+                Rectangle()
+                    .fill(LinearGradient(colors: style, startPoint: .top, endPoint: .bottom))
+                    .frame(width: UIScreen.main.bounds.size.width, height: 60, alignment: .bottom)
+            }
+                .edgesIgnoringSafeArea(.all))
+    }
 }
