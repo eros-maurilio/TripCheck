@@ -1,11 +1,3 @@
-//
-//  TagModifier.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 07/10/21.
-//
-
-import Foundation
 import SwiftUI
 
 struct TagModifierSelected: ViewModifier {
@@ -15,7 +7,7 @@ struct TagModifierSelected: ViewModifier {
             .foregroundColor(.white)
             .font(.publicSans(.regular, size: 17, relativeTo: .body)) // TODO: Change size to metrics
             .padding(10)
-            .background(Color.tripBlue.cornerRadius(5))
+            .background(Color.tripBlue.cornerRadius(LayoutMetrics.Design.Style.cornerRadius))
             .shadow(color: .shadow.opacity(0.15), radius: 10, x: 0, y: 4)
     }
 }
@@ -27,7 +19,7 @@ struct TagModifierNotSelected: ViewModifier {
             .foregroundColor(.black.opacity(0.6))
             .font(.publicSans(.regular, size: 17, relativeTo: .body)) // TODO: Change size to metrics
             .padding(10)
-            .background(Color.white.cornerRadius(5))
+            .background(Color.white.cornerRadius(LayoutMetrics.Design.Style.cornerRadius))
             .shadow(color: .shadow.opacity(0.15), radius: 10, x: 0, y: 4)
     }
 }

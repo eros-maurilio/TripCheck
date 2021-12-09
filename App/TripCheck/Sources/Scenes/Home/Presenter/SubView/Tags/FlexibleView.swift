@@ -1,21 +1,12 @@
-//
-//  FlexibleTagView.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 09/10/21.
-//
-
 import SwiftUI
 
 struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: Hashable {
-    let data: Data
     @State private var alignmentIndex = 0
-    private let alignments: [HorizontalAlignment] = [.leading, .center, .trailing]
-    private var alignment: HorizontalAlignment {
-        alignments[alignmentIndex]
-    }
-    let content: (Data.Element) -> Content
     @State private var availableWidth: CGFloat = 0
+    private var alignment: HorizontalAlignment { alignments[alignmentIndex] }
+    private let alignments: [HorizontalAlignment] = [.leading, .center, .trailing]
+    let data: Data
+    let content: (Data.Element) -> Content
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: alignment, vertical: .center)) {
@@ -25,7 +16,7 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
                     availableWidth = size.width
                 }
             
-            AFlexibleView(
+            FlexibleTagView(
                 availableWidth: availableWidth,
                 data: data,
                 content: content,

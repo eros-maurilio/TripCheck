@@ -1,10 +1,3 @@
-//
-//  CombinationButtonView.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 07/10/21.
-//
-
 import SwiftUI
 
 struct CombinationButtonView: View {
@@ -16,26 +9,23 @@ struct CombinationButtonView: View {
         } label: {
             HStack {
                 Spacer()
-                Image("symptom")
+                
+                Image.symptom
                     .resizable()
-                    .aspectRatio(1, contentMode: .fit)
-                Text("Trip Check")
+                    .scaledToFit()
+                    .padding(.vertical, LayoutMetrics.Design.Padding.buttonIcon)
+                
+                Text(Localizable.Home.Button.text)
+                    .font(.publicSans(.bold,
+                                      size: 14,
+                                      relativeTo: .subheadline))
+                
                 Spacer()
             }
             .foregroundColor(.white)
-            .padding(.vertical, 12)
             .background(Color.tripBlue)
-            .cornerRadius(5)
+            .cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
         }
         
     }
 }
-
-//struct CombinationButtonView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CombinationButtonView()
-//            .frame(width: 350, height: 40)
-//            .previewLayout(.fixed(width: 390, height: 150))
-//
-//    }
-//}

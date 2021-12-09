@@ -9,20 +9,12 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
-internal enum Localizable {
+internal enum Strings {
 
-  internal enum Home {
-    internal enum Button {
-      /// Trip Check
-      internal static let text = Localizable.tr("Localizable", "home.button.text")
-    }
-    internal enum Subtitle {
-      /// Select two substances to see how they interact
-      internal static let text = Localizable.tr("Localizable", "home.subtitle.text")
-    }
-    internal enum Title {
-      /// Harm Reduction
-      internal static let text = Localizable.tr("Localizable", "home.title.text")
+  internal enum Sf {
+    internal enum Symbols {
+      /// checkmark
+      internal static let selected = Strings.tr("Strings", "sf.Symbols.selected")
     }
   }
 }
@@ -31,7 +23,7 @@ internal enum Localizable {
 
 // MARK: - Implementation Details
 
-extension Localizable {
+extension Strings {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
     let format = BundleToken.bundle.localizedString(forKey: key, value: nil, table: table)
     return String(format: format, locale: Locale.current, arguments: args)
