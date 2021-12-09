@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TagView: View {
     var substance: String
-    @Binding var isSelected: Bool
+    var isSelected: Bool
     
     var body: some View {
         if isSelected {

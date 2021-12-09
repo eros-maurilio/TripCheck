@@ -25,22 +25,15 @@ extension View {
         self.background(LinearGradient(colors: style, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
     }
     
-    func bottomGradient(_ style: [Color]) -> some View {
-        self.overlay(
-            VStack {
-                Spacer()
-                Rectangle()
-                    .fill(LinearGradient(colors: style, startPoint: .top, endPoint: .bottom))
-                    .frame(width: UIScreen.main.bounds.size.width, height: 60, alignment: .bottom)
-            }
-                .edgesIgnoringSafeArea(.all))
-    }
-    
     func scroll(_ currentPosition: ScrollViewProxy,to id: Namespace.ID) -> some View {
         self.onAppear {
             withAnimation {
                 currentPosition.scrollTo(id, anchor: .bottom)
             }
         }
+    }
+    
+    func buttonFrame() -> some View {
+        self.frame(height: LayoutMetrics.Button.heightSize)
     }
 }
