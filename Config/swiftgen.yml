@@ -1,6 +1,12 @@
 input_dir: ../App/TripCheck/Resources/
 output_dir: ../App/TripCheck/Generated/
 strings:
+  - inputs: Strings.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Strings.swift
+        params:
+          enumName: Strings
   - inputs: Base.lproj
     filter: .+\.strings$
     outputs:

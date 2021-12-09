@@ -13,7 +13,6 @@ enum LayoutMetrics {
         enum Padding {
             static let standard: CGFloat = 20
             static let bottom: CGFloat = 30
-            static let minBottom: CGFloat = 30
         }
         
         enum Text {
