@@ -10,15 +10,39 @@ protocol HomeViewModelProtocol: ObservableObject {
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
+    // MARK: - Published Variables
+    
     @Published var selectedSubstances: [String] = []
     @Published var isTheButtonVisible: Bool = false
+    
+    // MARK: - Private Atributes
+    
     private let maxNumberOfSubstances = 2
     private var substancesModel = TypeOf()
+    private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
+    private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
+    
+    // MARK: - Public Variable
+    
     var substancesList: [String] { substancesModel.substances }
     
-    private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
+    // MARK: - View properties Exchanger
     
-    private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
+    func substanceSelection(substance: String) {
+        if Filter(substance) { return }
+        Remove(substance)
+        Append(substance)
+    }
+    
+    func showButton() {
+        if substancesCountEquals {
+            isTheButtonVisible = true
+        } else {
+            isTheButtonVisible = false
+        }
+    }
+    
+    // MARK: - Helper Methods
     
     private func Filter(_ substance: String) -> Bool {
         if selectedSubstances.contains(substance) {
@@ -37,21 +61,6 @@ final class HomeViewModel: HomeViewModelProtocol {
     private func Append(_ substance: String) {
         if substancesCountLessThen {
             selectedSubstances.append(substance)
-        }
-    }
-    
-    func substanceSelection(substance: String) {
-        if Filter(substance) { return }
-        Remove(substance)
-        Append(substance)
-        
-    }
-    
-    func showButton() {
-        if substancesCountEquals {
-            isTheButtonVisible = true
-        } else {
-            isTheButtonVisible = false
         }
     }
 }
