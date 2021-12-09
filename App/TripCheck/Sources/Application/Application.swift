@@ -3,7 +3,7 @@ import SwiftUI
 struct Application: View {
     var body: some View {
         ZStack {
-            HomeView()
+            HomeView(viewModel: HomeViewModel())
         }
     }
 }

@@ -1,13 +1,18 @@
-import SwiftUI
+import Foundation
 
 protocol HomeViewModelProtocol: ObservableObject {
+    var selectedSubstances: [String] { get set }
+    var isTheButtonVisible: Bool { get }
+    var substancesList: [String] { get }
+    
     func substanceSelection(substance: String)
+    func showButton()
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
     @Published var selectedSubstances: [String] = []
-    @Published var buttonState: Bool = false
-    let maxNumberOfSubstances = 2
+    @Published var isTheButtonVisible: Bool = false
+    private let maxNumberOfSubstances = 2
     private var substancesModel = TypeOf()
     var substancesList: [String] { substancesModel.substances }
     
@@ -44,9 +49,9 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     func showButton() {
         if substancesCountEquals {
-            buttonState = true
+            isTheButtonVisible = true
         } else {
-            buttonState = false
+            isTheButtonVisible = false
         }
     }
 }

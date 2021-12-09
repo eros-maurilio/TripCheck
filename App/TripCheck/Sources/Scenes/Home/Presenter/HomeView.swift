@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct HomeView: View {
-    @ObservedObject var model = HomeViewModel()
+struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol {
+    @ObservedObject var viewModel: ViewModelType
     @Namespace var bottomPostion
     
     var body: some View {
@@ -9,13 +9,10 @@ struct HomeView: View {
             ScrollViewReader { view in
                 
                 titles
-
+                
                 tags
                 
-                if model.buttonState {
-                    button
-                        .scroll(view, to: bottomPostion)
-                }
+                if viewModel.isTheButtonVisible { buttonAppears.scroll(view, to: bottomPostion) }
             }
         }
         .backgroundGradient(Style.Gradient.home)
@@ -23,35 +20,43 @@ struct HomeView: View {
     }
     
     private var titles: some View {
-        VStack(alignment: .leading, spacing: LayoutMetrics.Design.Padding.standard) {
+        VStack(alignment: .leading,
+               spacing: LayoutMetrics.Design.Padding.standard) {
+            
             Text(Localizable.Home.Title.text)
-                .font(.publicSans(.bold, size: LayoutMetrics.Design.Text.largeTitle, relativeTo: .title))
                 .foregroundColor(.tripBlue)
                 .padding(.top, -50) // FIXME: Coordinators?
+                .font(.publicSans(.bold,
+                                  size: LayoutMetrics.Design.Text.largeTitle,
+                                  relativeTo: .title))
             
             Text(Localizable.Home.Subtitle.text)
-                .font(.publicSans(.medium, size: LayoutMetrics.Design.Text.body, relativeTo: .body))
+                .font(.publicSans(.medium,
+                                  size: LayoutMetrics.Design.Text.body,
+                                  relativeTo: .body))
         }
         .homeTitleFrame()
         .standardBottomPadding()
     }
     
     private var tags: some View {
-        FlexibleView(data: model.substancesList) { item in
-            Button {
-                model.substanceSelection(substance: item)
-                withAnimation { model.showButton() }
-                
-            } label: {
-                TagView(substance: item, isSelected: model.selectedSubstances.contains(item))
+        VStack {
+            FlexibleView(data: viewModel.substancesList) { item in
+                Button {
+                    viewModel.substanceSelection(substance: item)
+                    withAnimation { viewModel.showButton() }
+                    
+                } label: {
+                    TagView(substance: item, isSelected: viewModel.selectedSubstances.contains(item))
+                }
             }
         }
-                     .standardHorizontalPadding()
-                     .standardBottomPadding()
+        .standardHorizontalPadding()
+        .standardBottomPadding()
     }
     
-    private var button: some View {
-        CombinationButtonView(substances: $model.selectedSubstances)
+    private var buttonAppears: some View {
+        CombinationButtonView(substances: $viewModel.selectedSubstances)
             .buttonFrame()
             .standardBottomPadding()
             .standardHorizontalPadding()
@@ -59,10 +64,12 @@ struct HomeView: View {
     }
 }
 
+#if DEBUG
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            HomeView()
+            HomeView(viewModel: HomeViewModel())
         }
     }
 }
+#endif
