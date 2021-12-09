@@ -5,6 +5,10 @@ enum LayoutMetrics {
         static let titleHorizontal = UIScreen.main.bounds.width - 60
     }
     
+    enum Button {
+        static let heightSize = UIScreen.main.bounds.height / 16
+    }
+    
     enum Design {
         enum Padding {
             static let standard: CGFloat = 20

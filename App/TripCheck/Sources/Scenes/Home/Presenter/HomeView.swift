@@ -2,14 +2,12 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var model = HomeViewModel()
-    @State var isSelected = false
-    @State var isSelected2 = true
     @Namespace var bottomPostion
-    @State var typeOf = TypeOf() // FIXME: this is not my place
     
     var body: some View {
         ScrollView {
             ScrollViewReader { view in
+                
                 titles
 
                 tags
@@ -21,7 +19,6 @@ struct HomeView: View {
             }
         }
         .backgroundGradient(Style.Gradient.home)
-        .bottomGradient(Style.Gradient.home)
         .navigationTitle(Localizable.Home.Title.text)
     }
     
@@ -40,13 +37,13 @@ struct HomeView: View {
     }
     
     private var tags: some View {
-        FlexibleView(data: typeOf.substances) { item in
+        FlexibleView(data: model.substancesList) { item in
             Button {
                 model.substanceSelection(substance: item)
                 withAnimation { model.showButton() }
                 
             } label: {
-                TagView(substance: item, isSelected: model.selectedSubstances.contains(item) ? $isSelected2 : $isSelected)
+                TagView(substance: item, isSelected: model.selectedSubstances.contains(item))
             }
         }
                      .standardHorizontalPadding()
@@ -55,10 +52,10 @@ struct HomeView: View {
     
     private var button: some View {
         CombinationButtonView(substances: $model.selectedSubstances)
-            .frame(height: UIScreen.main.bounds.size.height / 16)
-            .id(bottomPostion)
+            .buttonFrame()
             .standardBottomPadding()
             .standardHorizontalPadding()
+            .id(bottomPostion)
     }
 }
 

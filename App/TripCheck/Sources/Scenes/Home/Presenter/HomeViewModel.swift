@@ -8,7 +8,9 @@ final class HomeViewModel: HomeViewModelProtocol {
     @Published var selectedSubstances: [String] = []
     @Published var buttonState: Bool = false
     let maxNumberOfSubstances = 2
-
+    private var substancesModel = TypeOf()
+    var substancesList: [String] { substancesModel.substances }
+    
     private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
     
     private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
