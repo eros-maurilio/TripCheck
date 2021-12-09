@@ -17,7 +17,7 @@ internal enum Localizable {
       internal static let text = Localizable.tr("Localizable", "home.subtitle.text")
     }
     internal enum Title {
-      /// Harm Reduction for all
+      /// Harm Reduction
       internal static let text = Localizable.tr("Localizable", "home.title.text")
     }
   }

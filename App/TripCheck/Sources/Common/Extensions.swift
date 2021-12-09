@@ -25,15 +25,16 @@ extension View {
         self.background(LinearGradient(colors: style, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
     }
     
-    func scroll(_ currentPosition: ScrollViewProxy,to id: Namespace.ID) -> some View {
-        self.onAppear {
-            withAnimation {
-                currentPosition.scrollTo(id, anchor: .bottom)
-            }
-        }
-    }
-    
     func buttonFrame() -> some View {
         self.frame(height: LayoutMetrics.Button.heightSize)
+    }
+    
+    func dimShadow() -> some View {
+        self.shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
+    }
+    
+    func lightShadow() -> some View {
+        self.shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 4)
+
     }
 }
