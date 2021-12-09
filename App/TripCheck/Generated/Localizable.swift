@@ -12,6 +12,10 @@ import Foundation
 internal enum Localizable {
 
   internal enum Home {
+    internal enum Button {
+      /// Trip Check
+      internal static let text = Localizable.tr("Localizable", "home.button.text")
+    }
     internal enum Subtitle {
       /// Select two substances to see how they interact
       internal static let text = Localizable.tr("Localizable", "home.subtitle.text")

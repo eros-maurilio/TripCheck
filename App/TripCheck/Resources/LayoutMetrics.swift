@@ -6,13 +6,18 @@ enum LayoutMetrics {
     }
     
     enum Button {
-        static let heightSize = UIScreen.main.bounds.height / 16
+        static let heightSize = (UIScreen.main.bounds.height / 16)
     }
     
     enum Design {
         enum Padding {
             static let standard: CGFloat = 20
             static let bottom: CGFloat = 30
+            static let buttonIcon: CGFloat = 10
+        }
+        
+        enum Style {
+            static let cornerRadius: CGFloat = 5
         }
         
         enum Text {

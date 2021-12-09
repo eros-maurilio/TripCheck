@@ -19,7 +19,6 @@ struct TagView: View {
             }
             .tagNotSelected()
             .transition(.opacity)
-
         }
     }
 }
