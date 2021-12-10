@@ -174,8 +174,7 @@
 				14FFE4EE270F946100B1AA02 /* Fonts */,
 				14FFE4DB270F88C600B1AA02 /* Preview Content */,
 				148D76FD275E610A00BF772E /* Generated */,
-				1447835327600B800025C1B1 /* LayoutMetrics.swift */,
-				14CB230E2760470300833087 /* Style.swift */,
+				14BE57A02763799D00C962A2 /* Design */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -254,9 +253,19 @@
 			path = ../Generated;
 			sourceTree = "<group>";
 		};
+		14BE57A02763799D00C962A2 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				1447835327600B800025C1B1 /* LayoutMetrics.swift */,
+				14CB230E2760470300833087 /* Style.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		14D564F4276235FA002179DB /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */,
 				14D564F527623619002179DB /* Tags */,
 			);
 			path = SubView;
@@ -323,7 +332,6 @@
 			isa = PBXGroup;
 			children = (
 				14D6A596271073E400195697 /* DetailCombinationView.swift */,
-				14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

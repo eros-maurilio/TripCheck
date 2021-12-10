@@ -31,9 +31,7 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
             Text(Localizable.Home.Subtitle.text)
                 .homeTitleFrame()
                 .standardBottomPadding()
-                .font(.publicSans(.medium,
-                                  size: LayoutMetrics.Design.Text.body,
-                                  relativeTo: .body))
+                .font(Style.DisplayedFont.Home.subtitle)
         }
     }
     

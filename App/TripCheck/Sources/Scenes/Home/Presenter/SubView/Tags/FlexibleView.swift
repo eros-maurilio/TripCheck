@@ -25,5 +25,3 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
         }
     }
 }
-
-

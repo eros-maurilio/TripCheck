@@ -12,8 +12,7 @@ extension View {
         }
       )
       .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
-    }
-    
+    }    
     
     // MARK: - Padding
     
@@ -46,8 +45,17 @@ extension View {
     }
     
     func lightShadow() -> some View {
-        self.shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 4)
-
+        self.shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 4)
+    }
+    
+    // MARK: - Modifiers
+    
+    func tagSelected() -> some View {
+        self.modifier(TagModifierSelected())
+    }
+    
+    func tagNotSelected() -> some View {
+        self.modifier(TagModifierNotSelected())
     }
 }
 

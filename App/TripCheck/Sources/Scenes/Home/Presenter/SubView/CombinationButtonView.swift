@@ -26,6 +26,5 @@ struct CombinationButtonView: View {
             .background(Color.tripBlue)
             .cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
         }
-        
     }
 }
