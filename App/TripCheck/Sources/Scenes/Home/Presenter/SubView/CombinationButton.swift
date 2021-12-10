@@ -5,7 +5,7 @@ struct CombinationButton: View {
 
     var body: some View {
         NavigationLink {
-            DetailCombinationView(substances: substances)
+            CombinationView(substances: substances)
         } label: {
             HStack {
                 Spacer()

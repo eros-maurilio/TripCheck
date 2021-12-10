@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DrugInteraction: Codable, Hashable {
+struct DrugInteractionResponse: Codable, Hashable {
     var status: String?
     var note: String?
     var interactionCategoryA: String?
@@ -9,6 +9,6 @@ struct DrugInteraction: Codable, Hashable {
 
 struct Response: Codable {
     var err: Bool?
-    var data: [DrugInteraction]?
+    var data: [DrugInteractionResponse]?
     var url: String?
 }

@@ -6,12 +6,13 @@
 //
 import SwiftUI
 
-struct DetailCombinationView: View {
+struct CombinationView: View {
     @State private var icons = ["death", "alert", "heart", "decrease", "sinergy", "stable"]
     @State private var gradient = [Color.homeTop, Color.homeBottom]
     @State var substances: [String]
     @State var foreColor: Color = .clear
-    @StateObject var jsonModel = JSONInteractionViewModel()
+    @StateObject var jsonModel = APIService()
+    @ObservedObject var model = CombinationViewModel()
     @State var bottomColor: Color = .clear
     @State var topColor: Color = .clear
     @State var isShowingAlert = false
@@ -25,12 +26,13 @@ struct DetailCombinationView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            if jsonModel.data == nil || jsonModel.data?.count == 0 {
+            if jsonModel.drugsInteraction == nil || jsonModel.drugsInteraction?.count == 0 {
                 VStack(alignment: .center) {
                     ProgressView()
                         .padding(.bottom, 200)
                         .onAppear {
                             jsonModel.fetchData(subsA: substances[0], subsB: substances[1])
+                            model.loadCombination(drugA: substances[0], drugB: substances[1])
                         }
                 }
                 .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
@@ -39,7 +41,7 @@ struct DetailCombinationView: View {
             } else {
                 
                 VStack {
-                    ForEach(jsonModel.data!, id: \.self) { item in
+                    ForEach(jsonModel.drugsInteraction!, id: \.self) { item in
                         let currentNotice = item.status
                         
                         HStack {
@@ -119,6 +121,10 @@ struct DetailCombinationView: View {
                             
                         }
                     }
+                }
+                .onAppear {
+                    print("dkl;askd;lask;d")
+                    print(model.combination)
                 }
             }
         }
