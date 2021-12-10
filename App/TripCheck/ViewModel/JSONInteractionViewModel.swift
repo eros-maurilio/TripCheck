@@ -1,12 +1,3 @@
-//
-//  JSONInteractionViewModel.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 10/10/21.
-//
-
-import Foundation
-import CoreData
 import SwiftUI
 
 class JSONInteractionViewModel: ObservableObject {

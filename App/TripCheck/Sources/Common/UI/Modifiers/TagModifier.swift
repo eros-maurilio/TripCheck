@@ -14,6 +14,6 @@ struct TagModifierNotSelected: ViewModifier {
         content
             .foregroundColor(Style.TagColor.Text.defaut)
             .tagStyleFontPadding()
-            .background(Style.TagColor.background.selected)
+            .background(Style.TagColor.background.notSelect)
     }
 }
