@@ -12,7 +12,7 @@ protocol HomeViewModelProtocol: ObservableObject {
 final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Published Variables
     
-    @Published var selectedSubstances: [String] = []
+    @Published var selectedSubstances: [String]
     @Published var isTheButtonVisible: Bool = false
     
     // MARK: - Private Atributes
@@ -25,6 +25,12 @@ final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Public Variable
     
     var substancesList: [String] { substancesModel.substances }
+    
+    // MARK: - Class Instance
+    
+    init() {
+        selectedSubstances = [String]()
+    }
     
     // MARK: - View properties Exchanger
     

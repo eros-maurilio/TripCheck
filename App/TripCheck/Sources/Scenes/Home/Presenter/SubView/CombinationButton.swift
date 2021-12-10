@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CombinationButtonView: View {
+struct CombinationButton: View {
     @Binding var substances: [String]
 
     var body: some View {
@@ -16,9 +16,7 @@ struct CombinationButtonView: View {
                     .padding(.vertical, LayoutMetrics.Design.Padding.buttonIcon)
                 
                 Text(Localizable.Home.Button.text)
-                    .font(.publicSans(.bold,
-                                      size: 14,
-                                      relativeTo: .subheadline))
+                    .font(Style.DisplayedFont.Button.callToAction)
                 
                 Spacer()
             }
@@ -26,6 +24,5 @@ struct CombinationButtonView: View {
             .background(Color.tripBlue)
             .cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
         }
-        
     }
 }
