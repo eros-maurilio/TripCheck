@@ -30,9 +30,9 @@
 		14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D7270F88C300B1AA02 /* Application.swift */; };
 		14FFE4DA270F88C600B1AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE4D9270F88C600B1AA02 /* Assets.xcassets */; };
 		14FFE4DD270F88C600B1AA02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE4DC270F88C600B1AA02 /* Preview Assets.xcassets */; };
-		14FFE4E6270F8B4600B1AA02 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4E5270F8B4600B1AA02 /* TagView.swift */; };
+		14FFE4E6270F8B4600B1AA02 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4E5270F8B4600B1AA02 /* Tag.swift */; };
 		14FFE4EB270F912100B1AA02 /* TagModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4EA270F912100B1AA02 /* TagModifier.swift */; };
-		14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */; };
+		14FFE4ED270F933B00B1AA02 /* CombinationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4EC270F933B00B1AA02 /* CombinationButton.swift */; };
 		14FFE51A270F967F00B1AA02 /* PublicSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE508270F967D00B1AA02 /* PublicSans-Black.ttf */; };
 		14FFE51B270F967F00B1AA02 /* PublicSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE509270F967D00B1AA02 /* PublicSans-Medium.ttf */; };
 		14FFE51C270F967F00B1AA02 /* PublicSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE50A270F967D00B1AA02 /* PublicSans-SemiBold.ttf */; };
@@ -82,9 +82,9 @@
 		14FFE4D7270F88C300B1AA02 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		14FFE4D9270F88C600B1AA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FFE4DC270F88C600B1AA02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		14FFE4E5270F8B4600B1AA02 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		14FFE4E5270F8B4600B1AA02 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		14FFE4EA270F912100B1AA02 /* TagModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModifier.swift; sourceTree = "<group>"; };
-		14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationButtonView.swift; sourceTree = "<group>"; };
+		14FFE4EC270F933B00B1AA02 /* CombinationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationButton.swift; sourceTree = "<group>"; };
 		14FFE508270F967D00B1AA02 /* PublicSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Black.ttf"; sourceTree = "<group>"; };
 		14FFE509270F967D00B1AA02 /* PublicSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-Medium.ttf"; sourceTree = "<group>"; };
 		14FFE50A270F967D00B1AA02 /* PublicSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PublicSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 		14D564F4276235FA002179DB /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				14FFE4EC270F933B00B1AA02 /* CombinationButtonView.swift */,
+				14FFE4EC270F933B00B1AA02 /* CombinationButton.swift */,
 				14D564F527623619002179DB /* Tags */,
 			);
 			path = SubView;
@@ -274,7 +274,7 @@
 		14D564F527623619002179DB /* Tags */ = {
 			isa = PBXGroup;
 			children = (
-				14FFE4E5270F8B4600B1AA02 /* TagView.swift */,
+				14FFE4E5270F8B4600B1AA02 /* Tag.swift */,
 				14375D6227122FAD00260DE9 /* FlexibleView.swift */,
 				14375D642712306100260DE9 /* FlexibleTagView.swift */,
 			);
@@ -550,11 +550,11 @@
 				142EEA04275FF61500F9C553 /* HomeViewModel.swift in Sources */,
 				1447835427600B800025C1B1 /* LayoutMetrics.swift in Sources */,
 				14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */,
-				14FFE4ED270F933B00B1AA02 /* CombinationButtonView.swift in Sources */,
+				14FFE4ED270F933B00B1AA02 /* CombinationButton.swift in Sources */,
 				144C9DEB275F8A5A00E8C91C /* Fonts.swift in Sources */,
 				14126BF8275FE539009ADEC7 /* Assets.swift in Sources */,
 				14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */,
-				14FFE4E6270F8B4600B1AA02 /* TagView.swift in Sources */,
+				14FFE4E6270F8B4600B1AA02 /* Tag.swift in Sources */,
 				14812AAF27133683000C298D /* JSONInteractionViewModel.swift in Sources */,
 				14375D6327122FAD00260DE9 /* FlexibleView.swift in Sources */,
 				14FFE52F270F9A7100B1AA02 /* View+.swift in Sources */,

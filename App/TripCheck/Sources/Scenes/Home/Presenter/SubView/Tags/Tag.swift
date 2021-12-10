@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TagView: View {
+struct Tag: View {
     var substance: String
     var isSelected: Bool
     

@@ -48,6 +48,11 @@ extension View {
         self.shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 4)
     }
     
+    func tagStyleFontPadding() -> some View {
+        self.font(Style.DisplayedFont.Tag.body)
+            .padding(LayoutMetrics.Design.Padding.tag)
+    }
+    
     // MARK: - Modifiers
     
     func tagSelected() -> some View {
@@ -62,4 +67,5 @@ extension View {
 private struct SizePreferenceKey: PreferenceKey {
   static var defaultValue: CGSize = .zero
   static func reduce(value: inout CGSize, nextValue: () -> CGSize) {}
+
 }
