@@ -14,8 +14,8 @@ final class CombinationViewModel: CombinationViewModelProtocol {
     
     // MARK: - Private Atributes
     
-    private var drugA: String { substances.safeElement(atIndex: 0) ?? ""}
-    private var drugB: String { substances.safeElement(atIndex: 1) ?? ""}
+    private var drugA: String { substances.safeElement(atIndex: 0) ?? "" }
+    private var drugB: String { substances.safeElement(atIndex: 1) ?? "" }
     
     // MARK: - Life Cycle
     
