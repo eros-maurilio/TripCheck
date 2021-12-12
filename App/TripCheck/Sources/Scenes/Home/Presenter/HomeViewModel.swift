@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 protocol HomeViewModelProtocol: ObservableObject {
     var selectedSubstances: [String] { get set }
@@ -10,17 +11,18 @@ protocol HomeViewModelProtocol: ObservableObject {
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
+
     // MARK: - Published Variables
     
     @Published var selectedSubstances: [String]
     @Published var isTheButtonVisible: Bool = false
     
     // MARK: - Private Atributes
-    
     private let maxNumberOfSubstances = 2
     private var substancesModel = TypeOf()
     private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
     private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
+    @State private var pushActive = false
     
     // MARK: - Public Variable
     

@@ -185,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				148D76EA275E4C1900BF772E /* Common */,
+				14FFE4E3270F8AE600B1AA02 /* Models */,
 				145DD8EE275E4B1D00AF3FE8 /* Application */,
 				148D76EC275E4D2A00BF772E /* Services */,
 				148D76ED275E4D8800BF772E /* Scenes */,
@@ -205,7 +206,6 @@
 		14812AAD271335DA000C298D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				14812AAE27133683000C298D /* APIService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,6 +230,7 @@
 		148D76EC275E4D2A00BF772E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				14812AAE27133683000C298D /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,7 +308,6 @@
 				145DD8EC275E4A8700AF3FE8 /* Resources */,
 				145DD8ED275E4B0900AF3FE8 /* Sources */,
 				145DD8E7275E3E6600AF3FE8 /* Info.plist */,
-				14FFE4E3270F8AE600B1AA02 /* Models */,
 				14812AAD271335DA000C298D /* ViewModel */,
 			);
 			path = TripCheck;
