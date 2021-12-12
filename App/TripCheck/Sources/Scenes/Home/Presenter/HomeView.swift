@@ -9,9 +9,7 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
-                
                 titles
-                
                 tags
             }
             .backgroundGradient(Style.Gradient.home)
@@ -55,10 +53,14 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
     
     private var buttonAppears: some View {
         ZStack {
-            NavigationLink(destination: CombinationView(viewModel: CombinationViewModel(substances: viewModel.selectedSubstances)), isActive: $pushActive) { EmptyView() }.hidden()
-            CombinationButton {
-                pushActive = true
+            NavigationLink(destination:
+                            CombinationView(viewModel: CombinationViewModel(substances: viewModel.selectedSubstances)),
+                            isActive: $pushActive) {
+                EmptyView()
             }
+            .hidden()
+            
+            CombinationButton { pushActive = true }
             .buttonFrame()
             .standardHorizontalPadding()
             .standardBottomPadding()

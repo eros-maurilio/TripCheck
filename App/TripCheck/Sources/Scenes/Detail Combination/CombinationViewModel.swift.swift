@@ -4,17 +4,28 @@ import Combine
 protocol CombinationViewModelProtocol: ObservableObject {
     var combination: [DrugInteractionResponse] { get }
     var substances: [String] { get }
-
 }
 
 final class CombinationViewModel: CombinationViewModelProtocol {
-    @Published var combination: [DrugInteractionResponse] = []
+    // MARK: - Public Atributes
+    
+    @Published var combination: [DrugInteractionResponse]
     var substances: [String]
+    
+    // MARK: - Private Atributes
+    
+    private var drugA: String { substances.safeElement(atIndex: 0) ?? ""}
+    private var drugB: String { substances.safeElement(atIndex: 1) ?? ""}
+    
+    // MARK: - Life Cycle
     
     init(substances: [String]) {
         self.substances = substances
-        loadCombination(drugA: substances[0], drugB: substances[1])
+        combination = []
+        loadCombination(drugA: drugA, drugB: drugB)
     }
+    
+    // MARK: - Combination Method
     
    private func loadCombination(drugA: String, drugB: String) {
         APIService().getInteraction(drugA: drugA, drugB: drugB) { [weak self] result in
@@ -24,11 +35,10 @@ final class CombinationViewModel: CombinationViewModelProtocol {
             case let .success(combination):
                 DispatchQueue.main.async {
                     self.combination = combination.data
-                    print("Aqui \(combination)")
                 }
                 
             case let .failure(error):
-                print(error)
+                debugPrint(error)
             }
         }
     }

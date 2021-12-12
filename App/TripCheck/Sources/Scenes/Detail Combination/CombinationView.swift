@@ -1,9 +1,3 @@
-//
-//  DetailCombinationView.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 08/10/21.
-//
 import SwiftUI
 
 struct CombinationView<ViewModelType>: View where ViewModelType: CombinationViewModelProtocol {

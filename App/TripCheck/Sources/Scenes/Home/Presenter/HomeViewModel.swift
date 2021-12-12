@@ -15,14 +15,13 @@ final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Published Variables
     
     @Published var selectedSubstances: [String]
-    @Published var isTheButtonVisible: Bool = false
+    @Published var isTheButtonVisible: Bool
     
     // MARK: - Private Atributes
     private let maxNumberOfSubstances = 2
     private var substancesModel = TypeOf()
     private var substancesCountEquals: Bool { selectedSubstances.count == maxNumberOfSubstances}
     private var substancesCountLessThen: Bool { selectedSubstances.count < maxNumberOfSubstances}
-    @State private var pushActive = false
     
     // MARK: - Public Variable
     
@@ -32,6 +31,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     init() {
         selectedSubstances = [String]()
+        isTheButtonVisible = false
     }
     
     // MARK: - View properties Exchanger

@@ -43,7 +43,6 @@ class APIService: ObservableObject {
                 return
             }
             completion(.success(interaction))
-            print(interaction)
             return
         }
         task.resume()
