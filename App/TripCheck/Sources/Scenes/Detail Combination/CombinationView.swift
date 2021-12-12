@@ -1,20 +1,14 @@
-//
-//  DetailCombinationView.swift
-//  CrashChallenge4
-//
-//  Created by Eros Maurilio on 08/10/21.
-//
 import SwiftUI
 
-struct DetailCombinationView: View {
+struct CombinationView<ViewModelType>: View where ViewModelType: CombinationViewModelProtocol {
+    @ObservedObject var viewModel: ViewModelType
     @State private var icons = ["death", "alert", "heart", "decrease", "sinergy", "stable"]
     @State private var gradient = [Color.homeTop, Color.homeBottom]
-    @State var substances: [String]
     @State var foreColor: Color = .clear
-    @StateObject var jsonModel = JSONInteractionViewModel()
     @State var bottomColor: Color = .clear
     @State var topColor: Color = .clear
     @State var isShowingAlert = false
+    @State var bool = true
     var message = """
         The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision.
         Furthermore, all data comes from Tripsit.
@@ -25,13 +19,12 @@ struct DetailCombinationView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            if jsonModel.data == nil || jsonModel.data?.count == 0 {
+            if viewModel.combination.isEmpty {
                 VStack(alignment: .center) {
                     ProgressView()
                         .padding(.bottom, 200)
-                        .onAppear {
-                            jsonModel.fetchData(subsA: substances[0], subsB: substances[1])
-                        }
+
+
                 }
                 .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
                 .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom))
@@ -39,23 +32,25 @@ struct DetailCombinationView: View {
             } else {
                 
                 VStack {
-                    ForEach(jsonModel.data!, id: \.self) { item in
+                    ForEach(viewModel.combination, id: \.self) { item in
                         let currentNotice = item.status
-                        
+
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("\(substances[0]) +")
-                                Text("\(substances[1])")
+                                Text("\(item.interactionCategoryA) +")
+                                Text("\(item.interactionCategoryB)")
                             }
                             .foregroundColor(foreColor)
                             .font(.publicSans(.semiBold, size: 24, relativeTo: .title)) // TODO: Change size to metrics
-                            
+
                             Spacer()
                         }
                         
+                        Text("dal;kd;alskd;as \(item.status)")
+
                         switch currentNotice {
                         case "Dangerous":
-                            Components(icon: $icons[0], status: item.status!.uppercased(), note: item.note)
+                            Components(icon: $icons[0], status: item.status.uppercased(), note: item.note)
                                 .foregroundColor(.white)
                                 .onAppear {
                                     gradient = [Color.tripBlue, Color.tripBlue]
@@ -63,9 +58,9 @@ struct DetailCombinationView: View {
                                     topColor = .tripBlue
                                     bottomColor = .tripBlue
                                 }
-                            
+
                         case "Caution":
-                            Components(icon: $icons[1], status: item.status!, note: item.note)
+                            Components(icon: $icons[1], status: item.status, note: item.note)
                                 .foregroundColor(.black)
                                 .onAppear {
                                     gradient = [Color.tripBlue, Color.tripBlue]
@@ -73,9 +68,9 @@ struct DetailCombinationView: View {
                                     topColor = .tripBlue
                                     bottomColor = .tripBlue
                                 }
-                            
+
                         case "Unsafe":
-                            Components(icon: $icons[2], status: item.status!, note: item.note)
+                            Components(icon: $icons[2], status: item.status, note: item.note)
                                 .foregroundColor(.white)
                                 .onAppear {
                                     gradient = [Color.tripBlue, Color.tripBlue]
@@ -83,9 +78,9 @@ struct DetailCombinationView: View {
                                     topColor = .tripBlue
                                     bottomColor = .tripBlue
                                 }
-                            
+
                         case "Low Risk & Decrease":
-                            Components(icon: $icons[3], status: item.status!, note: item.note)
+                            Components(icon: $icons[3], status: item.status, note: item.note)
                                 .foregroundColor(.black)
                                 .onAppear {
                                     gradient = [Color.tripBlue, Color.tripBlue]
@@ -93,9 +88,9 @@ struct DetailCombinationView: View {
                                     topColor = .tripBlue
                                     bottomColor = .tripBlue
                                 }
-                            
+
                         case "Low Risk & Synergy":
-                            Components(icon: $icons[4], status: item.status!, note: item.note)
+                            Components(icon: $icons[4], status: item.status, note: item.note)
                                 .foregroundColor(.white)
                                 .onAppear {
                                     gradient = [Color.tripBlue, Color.tripBlue]
@@ -103,9 +98,9 @@ struct DetailCombinationView: View {
                                     topColor = .tripBlue
                                     bottomColor = .tripBlue
                                 }
-                            
+
                         case "Low Risk & No Synergy":
-                            Components(icon: $icons[5], status: item.status!, note: item.note)
+                            Components(icon: $icons[5], status: item.status, note: item.note)
                                 .foregroundColor(.black)
                                 .onAppear {
                                     gradient = [Color.tripBlue, Color.tripBlue]
@@ -113,13 +108,14 @@ struct DetailCombinationView: View {
                                     topColor = .tripBlue
                                     bottomColor = .tripBlue
                                 }
-                            
+
                         default:
                             Text("No informations avaliable")
-                            
+
                         }
                     }
                 }
+
             }
         }
         .alert(isPresented: $isShowingAlert, content: {
@@ -162,7 +158,9 @@ struct DetailCombinationView: View {
                 .font(.system(size: 17, weight: .medium, design: .default))
             }
         }
+
     }
+
     
     struct SubstancesName: View {
         var substance1: String

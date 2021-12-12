@@ -11,6 +11,21 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
 
+  internal enum Api {
+    internal enum Query {
+      /// drugA
+      internal static let drugA = Strings.tr("Strings", "api.query.drugA")
+      /// drugB
+      internal static let drugB = Strings.tr("Strings", "api.query.drugB")
+    }
+    internal enum Url {
+      /// https://tripbot.tripsit.me/api/
+      internal static let base = Strings.tr("Strings", "api.url.base")
+      /// tripsit/getInteraction/
+      internal static let getInteraction = Strings.tr("Strings", "api.url.getInteraction")
+    }
+  }
+
   internal enum Sf {
     internal enum Symbols {
       /// checkmark

@@ -2,15 +2,14 @@ import SwiftUI
 
 struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol {
     @ObservedObject var viewModel: ViewModelType
+    @State var pushActive = false
     
     // MARK: - View
     
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
-                
                 titles
-                
                 tags
             }
             .backgroundGradient(Style.Gradient.home)
@@ -22,7 +21,7 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
         .edgesIgnoringSafeArea(.bottom)
     }
     
-    // MARK: Subviewa
+    // MARK: - Subviewa
     
     private var titles: some View {
         VStack(alignment: .leading,
@@ -53,22 +52,19 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
     }
     
     private var buttonAppears: some View {
-        CombinationButton(substances: $viewModel.selectedSubstances)
+        ZStack {
+            NavigationLink(destination:
+                            CombinationView(viewModel: CombinationViewModel(substances: viewModel.selectedSubstances)),
+                            isActive: $pushActive) {
+                EmptyView()
+            }
+            .hidden()
+            
+            CombinationButton { pushActive = true }
             .buttonFrame()
             .standardHorizontalPadding()
             .standardBottomPadding()
             .dimShadow()
-    }
-}
-
-// MARK: - SwiftUI Preview
-
-#if DEBUG
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            HomeView(viewModel: HomeViewModel())
         }
     }
 }
-#endif

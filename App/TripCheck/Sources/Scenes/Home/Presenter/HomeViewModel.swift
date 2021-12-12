@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 protocol HomeViewModelProtocol: ObservableObject {
     var selectedSubstances: [String] { get set }
@@ -10,10 +11,11 @@ protocol HomeViewModelProtocol: ObservableObject {
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
+
     // MARK: - Published Variables
     
     @Published var selectedSubstances: [String]
-    @Published var isTheButtonVisible: Bool = false
+    @Published var isTheButtonVisible: Bool
     
     // MARK: - Private Atributes
     
@@ -30,14 +32,15 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     init() {
         selectedSubstances = [String]()
+        isTheButtonVisible = false
     }
     
     // MARK: - View properties Exchanger
     
     func substanceSelection(substance: String) {
-        if Filter(substance) { return }
-        Remove(substance)
-        Append(substance)
+        if filter(substance) { return }
+        remove(substance)
+        append(substance)
     }
     
     func showButton() {
@@ -50,7 +53,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     // MARK: - Helper Methods
     
-    private func Filter(_ substance: String) -> Bool {
+    private func filter(_ substance: String) -> Bool {
         if selectedSubstances.contains(substance) {
             selectedSubstances = selectedSubstances.filter { $0 != substance}
              return true
@@ -58,13 +61,13 @@ final class HomeViewModel: HomeViewModelProtocol {
         return false
     }
     
-    private func Remove(_ substance: String) {
+    private func remove(_ substance: String) {
         if substancesCountEquals {
             selectedSubstances.removeFirst()
         }
     }
     
-    private func Append(_ substance: String) {
+    private func append(_ substance: String) {
         if substancesCountLessThen {
             selectedSubstances.append(substance)
         }

@@ -1,12 +1,9 @@
 import SwiftUI
 
 struct CombinationButton: View {
-    @Binding var substances: [String]
-
+    var action: () -> Void
     var body: some View {
-        NavigationLink {
-            DetailCombinationView(substances: substances)
-        } label: {
+        Button(action: action) {
             HStack {
                 Spacer()
                 

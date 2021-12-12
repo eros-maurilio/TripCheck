@@ -1,1 +1,5 @@
 "sf.Symbols.selected" = "checkmark";
+"api.url.getInteraction" = "tripsit/getInteraction/";
+"api.url.base" = "https://tripbot.tripsit.me/api/";
+"api.query.drugA" = "drugA";
+"api.query.drugB" = "drugB";
