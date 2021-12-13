@@ -5,18 +5,20 @@ import SwiftUI
 protocol CombinationViewModelProtocol: ObservableObject {
     var combination: [DrugInteractionResponse] { get }
     var substances: [String] { get }
+    var drugA: String { get }
+    var drugB: String { get }
 }
 
 final class CombinationViewModel: CombinationViewModelProtocol {
-    // MARK: - Public Atributes
+    // MARK: - Atributes
     
     @Published var combination: [DrugInteractionResponse]
     var substances: [String]
     
-    // MARK: - Private Atributes
+    // MARK: - Computed Variables
     
-    private var drugA: String { substances.safeElement(atIndex: 0) ?? "" }
-    private var drugB: String { substances.safeElement(atIndex: 1) ?? "" }
+    var drugA: String { substances.safeElement(atIndex: 0) ?? "" }
+    var drugB: String { substances.safeElement(atIndex: 1) ?? "" }
     
     // MARK: - Life Cycle
     

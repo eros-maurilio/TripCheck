@@ -31,8 +31,8 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
 
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("\(item.interactionCategoryA) +")
-                                Text("\(item.interactionCategoryB)")
+                                Text("\(viewModel.drugA) +")
+                                Text("\(viewModel.drugB)")
                             }
                             .foregroundColor(foreColor)
                             .font(.publicSans(.semiBold, size: 24, relativeTo: .title2))
@@ -125,7 +125,6 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                 }
             }
         }
-
     }
 
     struct SubstancesName: View {
@@ -170,7 +169,7 @@ struct Description: View {
                 .font(.publicSans(.bold, size: 18, relativeTo: .title)) // TODO: Change size to metrics
                 .padding(.bottom, 25)
             
-            Text(note ?? "There is no more information available.")
+            Text(note ?? Localizable.Combination.Note.empty)
                 .font(.publicSans(.light, size: 17, relativeTo: .title)) // TODO: Change size to metrics
                 .lineSpacing(6)
         }
