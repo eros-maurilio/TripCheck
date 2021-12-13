@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import SwiftUI
 
 protocol CombinationViewModelProtocol: ObservableObject {
     var combination: [DrugInteractionResponse] { get }

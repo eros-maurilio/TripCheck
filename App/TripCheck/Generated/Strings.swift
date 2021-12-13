@@ -28,6 +28,8 @@ internal enum Strings {
 
   internal enum Sf {
     internal enum Symbols {
+      /// info.circle
+      internal static let info = Strings.tr("Strings", "sf.Symbols.info")
       /// checkmark
       internal static let selected = Strings.tr("Strings", "sf.Symbols.selected")
     }
