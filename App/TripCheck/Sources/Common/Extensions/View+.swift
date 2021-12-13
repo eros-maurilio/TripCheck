@@ -62,6 +62,17 @@ extension View {
     func tagNotSelected() -> some View {
         self.modifier(TagModifierNotSelected())
     }
+    
+    // MARK: - Alert
+    
+    func informationAlert(_ isPresented: Binding<Bool>) -> some View {
+        self.alert(isPresented: isPresented, content: {
+            Alert(title: Text(Localizable.Combination.Alert.title),
+                  message: Text(Localizable.Combination.Alert.text),
+                  dismissButton: .default(Text(Localizable.Combination.Alert.action)))
+        })
+    }
+
 }
 
 private struct SizePreferenceKey: PreferenceKey {

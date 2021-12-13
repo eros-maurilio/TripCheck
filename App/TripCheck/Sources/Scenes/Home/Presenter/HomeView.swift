@@ -31,6 +31,7 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
                 .homeTitleFrame()
                 .standardBottomPadding()
                 .font(Style.DisplayedFont.Home.subtitle)
+                .foregroundColor(.universalBlack)
         }
     }
     

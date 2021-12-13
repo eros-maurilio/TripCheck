@@ -13,10 +13,12 @@ internal enum Localizable {
 
   internal enum Combination {
     internal enum Alert {
+      /// Ok
+      internal static let action = Localizable.tr("Localizable", "combination.alert.action")
       /// The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision.
       /// Furthermore, all data comes from Tripsit.
       internal static let text = Localizable.tr("Localizable", "combination.alert.text")
-      /// important
+      /// Important
       internal static let title = Localizable.tr("Localizable", "combination.alert.title")
     }
   }

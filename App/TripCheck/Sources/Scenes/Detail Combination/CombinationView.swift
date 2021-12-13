@@ -9,9 +9,7 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
     @State var topColor: Color = .clear
     @State var isShowingAlert = false
 
-    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -109,11 +107,8 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                         }
                     }
                 }
-                    
                 }
-                .alert(isPresented: $isShowingAlert, content: {
-                    Alert(title: Text(Localizable.Combination.Alert.title), message: Text(Localizable.Combination.Alert.text), dismissButton: .default(Text("OK")))
-                })
+                .informationAlert($isShowingAlert)
                 .padding(.horizontal, 40)
                 .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
                 .preferredColorScheme(foreColor == .white ? .dark : .light)
@@ -128,13 +123,11 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                         .font(.system(size: 17, weight: .medium, design: .default))
                     }
                 }
-
             }
         }
 
     }
 
-    
     struct SubstancesName: View {
         var substance1: String
         var substance2: String
