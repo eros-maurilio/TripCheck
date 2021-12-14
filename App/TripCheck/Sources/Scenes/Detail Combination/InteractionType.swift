@@ -59,9 +59,9 @@ enum InteractionType: String, InteractionConstructor {
         case .lowRiskDecrease:
             return Image.decrease
         case .lowRiskSinergy:
-            return Image.death
+            return Image.sinergy
         case .lowRiskNoSinergy:
-            return Image.death
+            return Image.stable
 
         }
     }
