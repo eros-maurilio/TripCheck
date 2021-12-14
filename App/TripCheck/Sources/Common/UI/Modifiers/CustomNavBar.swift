@@ -18,6 +18,6 @@ struct NavButtons: View {
                 }
             }
             .foregroundColor(color)
-            .font(.system(size: 17, weight: .medium, design: .default))
+            .font(Style.DisplayedFont.NavigationButtons.size)
     }
 }

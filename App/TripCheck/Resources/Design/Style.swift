@@ -39,5 +39,9 @@ enum Style {
                                                     size: LayoutMetrics.Design.Text.body,
                                                     relativeTo: .body)
         }
+        
+        enum NavigationButtons {
+            static var size: Font = .system(size: 18, weight: .medium, design: .default)
+        }
     }
 }
