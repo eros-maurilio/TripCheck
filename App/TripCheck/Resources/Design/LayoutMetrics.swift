@@ -28,5 +28,10 @@ enum LayoutMetrics {
             static let headline: CGFloat = 18
             static let title: CGFloat = 24
         }
+        
+        enum Screen {
+            static let maxWidth = UIScreen.main.bounds.width
+            static let maxHeight = UIScreen.main.bounds.height
+        }
     }
 }

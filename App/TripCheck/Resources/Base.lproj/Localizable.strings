@@ -1,3 +1,9 @@
 "home.title.text" = "Harm Reduction";
 "home.subtitle.text" = "Select two substances to see how they interact";
 "home.button.text" = "Trip Check";
+
+"combination.alert.title" = "Important";
+"combination.alert.text" = "The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision.\nFurthermore, all data comes from Tripsit.";
+"combination.alert.action" = "Ok";
+
+"combination.note.empty" = "There is no more information available.";

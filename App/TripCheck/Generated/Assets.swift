@@ -8,6 +8,7 @@ internal extension Color {
   static var accentColor : Color { Color("AccentColor", bundle: BundleToken.bundle) }
   static var shadow : Color { Color("Shadow", bundle: BundleToken.bundle) }
   static var tripBlue : Color { Color("TripBlue", bundle: BundleToken.bundle) }
+  static var universalBlack : Color { Color("UniversalBlack", bundle: BundleToken.bundle) }
   static var cautionBottom : Color { Color("CautionBottom", bundle: BundleToken.bundle) }
   static var cautionTop : Color { Color("CautionTop", bundle: BundleToken.bundle) }
   static var dangerousBottom : Color { Color("DangerousBottom", bundle: BundleToken.bundle) }

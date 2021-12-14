@@ -28,6 +28,7 @@
 		14BE57A22763932B00C962A2 /* CombinationViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE57A12763932B00C962A2 /* CombinationViewModel.swift.swift */; };
 		14CB230F2760470300833087 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB230E2760470300833087 /* Style.swift */; };
 		14D6A597271073E400195697 /* CombinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A596271073E400195697 /* CombinationView.swift */; };
+		14F84E97276911E90066C765 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F84E96276911E90066C765 /* CustomNavBar.swift */; };
 		14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */; };
 		14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D7270F88C300B1AA02 /* Application.swift */; };
 		14FFE4DA270F88C600B1AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FFE4D9270F88C600B1AA02 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		14C5F70F275F986A00E16E3A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14CB230E2760470300833087 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		14D6A596271073E400195697 /* CombinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationView.swift; sourceTree = "<group>"; };
+		14F84E96276911E90066C765 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		14FFE4D2270F88C300B1AA02 /* TripCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 		14FFE4D7270F88C300B1AA02 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				14FFE4EA270F912100B1AA02 /* TagModifier.swift */,
+				14F84E96276911E90066C765 /* CustomNavBar.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */,
 				14FFE4E6270F8B4600B1AA02 /* Tag.swift in Sources */,
 				14812AAF27133683000C298D /* APIService.swift in Sources */,
+				14F84E97276911E90066C765 /* CustomNavBar.swift in Sources */,
 				14375D6327122FAD00260DE9 /* FlexibleView.swift in Sources */,
 				14FFE52F270F9A7100B1AA02 /* View+.swift in Sources */,
 				14D6A597271073E400195697 /* CombinationView.swift in Sources */,
@@ -736,7 +740,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -768,7 +772,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

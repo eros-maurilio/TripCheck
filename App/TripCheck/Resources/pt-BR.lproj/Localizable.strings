@@ -1,3 +1,9 @@
 "home.title.text" = "Redução de Danos";
 "home.subtitle.text" = "Selecione duas substâncias para verficar de que forma interagem";
 "home.button.text" = "Trip Check";
+
+"combination.alert.title" = "Important";
+"combination.alert.text" = "The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision.\nFurthermore, all data comes from Tripsit.";
+"combination.alert.action" = "Ok";
+
+"combination.note.empty" = "There is no more information available.";

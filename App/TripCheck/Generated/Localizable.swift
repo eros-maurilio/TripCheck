@@ -11,6 +11,22 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Localizable {
 
+  internal enum Combination {
+    internal enum Alert {
+      /// Ok
+      internal static let action = Localizable.tr("Localizable", "combination.alert.action")
+      /// The information available here is for quick reference, it is recommended that further research be done so that you can make the best decision.
+      /// Furthermore, all data comes from Tripsit.
+      internal static let text = Localizable.tr("Localizable", "combination.alert.text")
+      /// Important
+      internal static let title = Localizable.tr("Localizable", "combination.alert.title")
+    }
+    internal enum Note {
+      /// There is no more information available.
+      internal static let empty = Localizable.tr("Localizable", "combination.note.empty")
+    }
+  }
+
   internal enum Home {
     internal enum Button {
       /// Trip Check

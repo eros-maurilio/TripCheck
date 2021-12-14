@@ -28,6 +28,10 @@ internal enum Strings {
 
   internal enum Sf {
     internal enum Symbols {
+      /// chevron.left
+      internal static let back = Strings.tr("Strings", "sf.Symbols.back")
+      /// info.circle
+      internal static let info = Strings.tr("Strings", "sf.Symbols.info")
       /// checkmark
       internal static let selected = Strings.tr("Strings", "sf.Symbols.selected")
     }
