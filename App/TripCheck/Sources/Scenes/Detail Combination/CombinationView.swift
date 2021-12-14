@@ -11,20 +11,18 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
     
     var body: some View {
         ZStack {
-            if viewModel.combination.isEmpty {
+            if viewModel.interactionType == nil {
                 VStack(alignment: .center) {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .tripBlue))
                 }
                 .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height, alignment: .center)
                 .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom))
-                .navigationBarHidden(viewModel.combination.isEmpty)
+                .navigationBarHidden(viewModel.interactionType == nil)
                 
             } else {
                 ScrollView(showsIndicators: false) {
                     VStack {
-                        let item = viewModel.combination.first!
-                        
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("\(viewModel.drugA) +")
@@ -37,7 +35,7 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                         }
                         
                         if let status = viewModel.interactionType {
-                            Components(icon: status.icon, status: item.status, note: item.note)
+                            Components(icon: status.icon, status: viewModel.processedData.status, note: viewModel.processedData.note)
                                 .foregroundColor(status.foregroundColor)
                                 .onAppear {
                                     gradient = status.gradient
@@ -45,7 +43,6 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                                 }
                         } else {
                             Text("No informations avaliable")
-                            
                         }
                     }
                 }
