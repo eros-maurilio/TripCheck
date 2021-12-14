@@ -3,12 +3,12 @@ import SwiftUI
 struct CombinationView<ViewModelType>: View where ViewModelType: CombinationViewModelProtocol {
     @ObservedObject var viewModel: ViewModelType
     
-    @State private var gradient = [Color.homeTop, Color.homeBottom]
+    @State private var currentGradient = Style.Gradient.home
     @State var foreColor: Color = .clear
     @State var isShowingAlert = false
     
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         ZStack {
             if viewModel.interactionType == nil {
@@ -16,9 +16,9 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .tripBlue))
                 }
-                .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height, alignment: .center)
-                .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom))
                 .navigationBarHidden(viewModel.interactionType == nil)
+                .allCentralizedFrame()
+                .backgroundGradient(currentGradient)
                 
             } else {
                 ScrollView(showsIndicators: false) {
@@ -34,60 +34,50 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                             Spacer()
                         }
                         
-                        if let status = viewModel.interactionType {
-                            Components(icon: status.icon, status: viewModel.processedData.status, note: viewModel.processedData.note)
-                                .foregroundColor(status.foregroundColor)
+                        if let interactionType = viewModel.interactionType {
+                            Components(icon: interactionType.icon,
+                                       status: viewModel.processedData.status,
+                                       note: viewModel.processedData.note)
+                                .foregroundColor(interactionType.foregroundColor)
                                 .onAppear {
-                                    gradient = status.gradient
-                                    foreColor = status.foregroundColor
+                                    currentGradient = interactionType.gradient
+                                    foreColor = interactionType.foregroundColor
                                 }
+                            
                         } else {
                             Text("No informations avaliable")
                         }
                     }
                 }
+                .navigationBarBackButtonHidden(true)
                 .informationAlert($isShowingAlert)
                 .padding(.horizontal, 40)
-                .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
+                .backgroundGradient(currentGradient)
                 .preferredColorScheme(foreColor == .white ? .dark : .light)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
+                    ToolbarItem(placement: .principal) {
+                        NavButtons(leadingButtonAction: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, trailingButtonAction: {
                             isShowingAlert = true
-                        } label: {
-                            Image(systemName: Strings.Sf.Symbols.info)
-                        }
-                        .foregroundColor(foreColor)
-                        .font(.system(size: 17, weight: .medium, design: .default))
+                        }, color: foreColor)
                     }
                 }
             }
         }
     }
-    
-    struct SubstancesName: View {
-        var substance1: String
-        var substance2: String
-        
-        var body: some View {
-            Group {
-                Text("\(substance1) +")
-                Text("\(substance2)")
-            }
-            .font(.publicSans(.semiBold, size: 24, relativeTo: .title)) // TODO: Change size to metrics
-        }
-    }
 }
+
 struct WarningType: View {
     var icon: Image
-    var status: String?
+    var status: String
     
     var body: some View {
         HStack(alignment: .top) {
             icon
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)
-            Text(status!)
+            Text(status)
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.publicSans(.bold, size: 36, relativeTo: .title)) // TODO: Change size to metrics
                 .padding(.top, 7)

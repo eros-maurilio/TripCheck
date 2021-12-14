@@ -38,7 +38,7 @@ enum InteractionType: String, InteractionConstructor {
         case .caution:
             return .black
         case .unsafe:
-            return .black
+            return .white
         case .lowRiskDecrease:
             return .black
         case .lowRiskSinergy:

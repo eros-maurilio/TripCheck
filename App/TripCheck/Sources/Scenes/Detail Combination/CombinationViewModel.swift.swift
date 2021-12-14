@@ -14,11 +14,11 @@ final class CombinationViewModel: CombinationViewModelProtocol {
     // MARK: - Atributes
     @Published var processedData: DrugInteractionResponse
     @Published var interactionType: InteractionType?
+    private var combinationData: [DrugInteractionResponse]
     var substances: [String]
     
     // MARK: - Computed Variables
     
-    private var combinationData: [DrugInteractionResponse]
     var drugA: String { substances.safeElement(atIndex: 0) ?? "" }
     var drugB: String { substances.safeElement(atIndex: 1) ?? "" }
     

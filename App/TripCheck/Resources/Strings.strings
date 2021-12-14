@@ -1,5 +1,6 @@
 "sf.Symbols.selected" = "checkmark";
-"sf.Symbols.info" ="info.circle";
+"sf.Symbols.info" = "info.circle";
+"sf.Symbols.back" = "chevron.left";
 
 "api.url.getInteraction" = "tripsit/getInteraction/";
 "api.url.base" = "https://tripbot.tripsit.me/api/";

@@ -26,26 +26,37 @@ extension View {
     
     // MARK: - Frames
     
-    func homeTitleFrame() -> some View {
-        self.frame(width: LayoutMetrics.Home.titleHorizontal, alignment: .leading)
-    }
-    
     func buttonFrame() -> some View {
         self.frame(height: LayoutMetrics.Button.heightSize)
+    }
+    
+    func homeTitleFrame() -> some View {
+        self.frame(width: LayoutMetrics.Home.titleHorizontal,
+                   alignment: .leading)
+    }
+        
+    func allCentralizedFrame() -> some View {
+        self.frame(width: LayoutMetrics.Design.Screen.maxWidth,
+                   height: LayoutMetrics.Design.Screen.maxHeight,
+                   alignment: .center)
     }
     
     // MARK: - Styling
     
     func backgroundGradient(_ style: [Color]) -> some View {
-        self.background(LinearGradient(colors: style, startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
+        self.background(LinearGradient(colors: style,
+                                       startPoint: .top,
+                                       endPoint: .bottom).edgesIgnoringSafeArea(.all))
     }
     
     func dimShadow() -> some View {
-        self.shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
+        self.shadow(color: .black.opacity(0.3),
+                    radius: 10, x: 0, y: 10)
     }
     
     func lightShadow() -> some View {
-        self.shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 4)
+        self.shadow(color: .black.opacity(0.1),
+                    radius: 10, x: 0, y: 4)
     }
     
     func tagStyleFontPadding() -> some View {
@@ -72,7 +83,6 @@ extension View {
                   dismissButton: .default(Text(Localizable.Combination.Alert.action)))
         })
     }
-
 }
 
 private struct SizePreferenceKey: PreferenceKey {
