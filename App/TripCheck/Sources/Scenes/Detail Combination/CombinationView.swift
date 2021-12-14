@@ -5,10 +5,8 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
     
     @State private var gradient = [Color.homeTop, Color.homeBottom]
     @State var foreColor: Color = .clear
-    @State var bottomColor: Color = .clear
-    @State var topColor: Color = .clear
     @State var isShowingAlert = false
-
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
@@ -17,7 +15,6 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                 VStack(alignment: .center) {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .tripBlue))
-                
                 }
                 .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height, alignment: .center)
                 .background(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom))
@@ -25,10 +22,9 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                 
             } else {
                 ScrollView(showsIndicators: false) {
-                VStack {
-                    ForEach(viewModel.combination, id: \.self) { item in
-                        let currentNotice = item.status
-
+                    VStack {
+                        let item = viewModel.combination.first!
+                        
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("\(viewModel.drugA) +")
@@ -36,77 +32,22 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                             }
                             .foregroundColor(foreColor)
                             .font(.publicSans(.semiBold, size: 24, relativeTo: .title2))
-
+                            
                             Spacer()
                         }
                         
-                        switch currentNotice {
-                        case "Dangerous":
-                            Components(icon: Image.death, status: item.status.uppercased(), note: item.note)
-                                .foregroundColor(.white)
+                        if let status = viewModel.interactionType {
+                            Components(icon: status.icon, status: item.status, note: item.note)
+                                .foregroundColor(status.foregroundColor)
                                 .onAppear {
-                                    gradient = [Color.tripBlue, Color.tripBlue]
-                                    foreColor = .white
-                                    topColor = .tripBlue
-                                    bottomColor = .tripBlue
+                                    gradient = status.gradient
+                                    foreColor = status.foregroundColor
                                 }
-
-                        case "Caution":
-                            Components(icon: Image.alert, status: item.status, note: item.note)
-                                .foregroundColor(.black)
-                                .onAppear {
-                                    gradient = [Color.tripBlue, Color.tripBlue]
-                                    foreColor = .black
-                                    topColor = .tripBlue
-                                    bottomColor = .tripBlue
-                                }
-
-                        case "Unsafe":
-                            Components(icon: Image.heart, status: item.status, note: item.note)
-                                .foregroundColor(.white)
-                                .onAppear {
-                                    gradient = [Color.tripBlue, Color.tripBlue]
-                                    foreColor = .white
-                                    topColor = .tripBlue
-                                    bottomColor = .tripBlue
-                                }
-
-                        case "Low Risk & Decrease":
-                            Components(icon: Image.decrease, status: item.status, note: item.note)
-                                .foregroundColor(.black)
-                                .onAppear {
-                                    gradient = [Color.tripBlue, Color.tripBlue]
-                                    foreColor = .black
-                                    topColor = .tripBlue
-                                    bottomColor = .tripBlue
-                                }
-
-                        case "Low Risk & Synergy":
-                            Components(icon: Image.sinergy, status: item.status, note: item.note)
-                                .foregroundColor(.white)
-                                .onAppear {
-                                    gradient = [Color.tripBlue, Color.tripBlue]
-                                    foreColor = .white
-                                    topColor = .tripBlue
-                                    bottomColor = .tripBlue
-                                }
-
-                        case "Low Risk & No Synergy":
-                            Components(icon: Image.decrease, status: item.status, note: item.note)
-                                .foregroundColor(.black)
-                                .onAppear {
-                                    gradient = [Color.tripBlue, Color.tripBlue]
-                                    foreColor = .black
-                                    topColor = .tripBlue
-                                    bottomColor = .tripBlue
-                                }
-
-                        default:
+                        } else {
                             Text("No informations avaliable")
-
+                            
                         }
                     }
-                }
                 }
                 .informationAlert($isShowingAlert)
                 .padding(.horizontal, 40)
@@ -114,11 +55,11 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                 .preferredColorScheme(foreColor == .white ? .dark : .light)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                            Button {
-                                isShowingAlert = true
-                            } label: {
-                                Image(systemName: Strings.Sf.Symbols.info)
-                            }
+                        Button {
+                            isShowingAlert = true
+                        } label: {
+                            Image(systemName: Strings.Sf.Symbols.info)
+                        }
                         .foregroundColor(foreColor)
                         .font(.system(size: 17, weight: .medium, design: .default))
                     }
@@ -126,7 +67,7 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
             }
         }
     }
-
+    
     struct SubstancesName: View {
         var substance1: String
         var substance2: String

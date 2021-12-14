@@ -1,4 +1,3 @@
-import Foundation
 import Combine
 import SwiftUI
 
@@ -7,12 +6,15 @@ protocol CombinationViewModelProtocol: ObservableObject {
     var substances: [String] { get }
     var drugA: String { get }
     var drugB: String { get }
+    var interactionType: InteractionType? { get }
 }
 
 final class CombinationViewModel: CombinationViewModelProtocol {
+    
     // MARK: - Atributes
     
     @Published var combination: [DrugInteractionResponse]
+    @Published var interactionType: InteractionType?
     var substances: [String]
     
     // MARK: - Computed Variables
@@ -30,7 +32,7 @@ final class CombinationViewModel: CombinationViewModelProtocol {
     
     // MARK: - Combination Method
     
-   private func loadCombination(drugA: String, drugB: String) {
+    private func loadCombination(drugA: String, drugB: String) {
         APIService().getInteraction(drugA: drugA, drugB: drugB) { [weak self] result in
             guard let self = self else { return }
             
@@ -38,6 +40,8 @@ final class CombinationViewModel: CombinationViewModelProtocol {
             case let .success(combination):
                 DispatchQueue.main.async {
                     self.combination = combination.data
+                    guard let combinationStatus = self.combination.first else { return }
+                    self.interactionType = InteractionType(rawValue: combinationStatus.status)
                 }
                 
             case let .failure(error):

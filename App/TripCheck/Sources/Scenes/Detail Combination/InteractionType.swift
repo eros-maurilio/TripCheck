@@ -1,35 +1,18 @@
 import SwiftUI
 
 protocol InteractionConstructor {
-    var status: String { get }
     var gradient: [Color] { get }
     var foregroundColor: Color { get }
+    var icon: Image { get }
 }
 
-enum InteractionType: InteractionConstructor {
-    case dangerous
-    case caution
-    case unsafe
-    case lowRiskDecrease
-    case lowRiskSinergy
-    case lowRiskNoSinergy
-    
-    var status: String {
-        switch self {
-        case .dangerous:
-           return "Dangerous"
-        case .caution:
-            return "Caution"
-        case .unsafe:
-            return "Unsafe"
-        case .lowRiskDecrease:
-            return "Low Risk & Decrease"
-        case .lowRiskSinergy:
-            return "Low Risk & Synergy"
-        case .lowRiskNoSinergy:
-            return "Low Risk & No Synergy"
-        }
-    }
+enum InteractionType: String, InteractionConstructor {
+    case dangerous = "Dangerous"
+    case caution = "Caution"
+    case unsafe = "Unsafe"
+    case lowRiskDecrease = "Low Risk & Decrease"
+    case lowRiskSinergy = "Low Risk & Synergy"
+    case lowRiskNoSinergy = "Low Risk & No Synergy"
     
     var gradient: [Color] {
         switch self {
@@ -40,7 +23,7 @@ enum InteractionType: InteractionConstructor {
         case .unsafe:
             return [.unsafeTop, .unsafeBottom]
         case .lowRiskDecrease:
-            return [.lowRiskDecreaseTop, .lowRiskSinergyBottom]
+            return [.lowRiskDecreaseTop, .lowRiskDecreaseBottom]
         case .lowRiskSinergy:
             return [.lowRiskSinergyTop, .lowRiskSinergyBottom]
         case .lowRiskNoSinergy:
@@ -53,7 +36,7 @@ enum InteractionType: InteractionConstructor {
         case .dangerous:
             return .white
         case .caution:
-            return .white
+            return .black
         case .unsafe:
             return .black
         case .lowRiskDecrease:
@@ -62,6 +45,24 @@ enum InteractionType: InteractionConstructor {
             return .white
         case .lowRiskNoSinergy:
             return .black
+        }
+    }
+    
+    var icon: Image {
+        switch self {
+        case .dangerous:
+            return Image.death
+        case .caution:
+            return Image.alert
+        case .unsafe:
+            return Image.heart
+        case .lowRiskDecrease:
+            return Image.decrease
+        case .lowRiskSinergy:
+            return Image.death
+        case .lowRiskNoSinergy:
+            return Image.death
+
         }
     }
 }
