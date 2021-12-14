@@ -79,7 +79,7 @@ struct WarningType: View {
                 .aspectRatio(1, contentMode: .fit)
             Text(status)
                 .fixedSize(horizontal: false, vertical: true)
-                .font(.publicSans(.bold, size: 36, relativeTo: .title)) // TODO: Change size to metrics
+                .font(Style.DisplayedFont.Combination.interactionTypeTitle)
                 .padding(.top, 7)
             Spacer()
         }
@@ -94,11 +94,11 @@ struct Description: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Note")
-                .font(.publicSans(.bold, size: 18, relativeTo: .title)) // TODO: Change size to metrics
+                .font(Style.DisplayedFont.Combination.Note.title)
                 .padding(.bottom, 25)
             
             Text(note ?? Localizable.Combination.Note.empty)
-                .font(.publicSans(.light, size: 17, relativeTo: .title)) // TODO: Change size to metrics
+                .font(Style.DisplayedFont.Combination.Note.body)
                 .lineSpacing(6)
         }
     }
