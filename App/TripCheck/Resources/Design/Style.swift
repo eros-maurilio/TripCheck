@@ -46,7 +46,11 @@ enum Style {
                                                                 size:LayoutMetrics.Design.Text.extraLargeTitle,
                                                                 relativeTo: .title)
             
+            static let title: Font = .publicSans(.semiBold,
+                                                 size: LayoutMetrics.Design.Text.title,
+                                                 relativeTo: .title2)
             enum Note {
+                
                 static let title: Font = .publicSans(.bold,
                                                      size: LayoutMetrics.Design.Text.headline,
                                                      relativeTo: .headline)

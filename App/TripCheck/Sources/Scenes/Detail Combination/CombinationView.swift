@@ -22,23 +22,17 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                 
             } else {
                 ScrollView(showsIndicators: false) {
-                    VStack {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text("\(viewModel.drugA) +")
-                                Text("\(viewModel.drugB)")
-                            }
-                            .foregroundColor(foreColor)
-                            .font(.publicSans(.semiBold, size: 24, relativeTo: .title2))
-                            
-                            Spacer()
-                        }
-                        
+                    VStack(alignment: .leading) {
+                        Text("\(viewModel.drugA) +")
+                        Text(viewModel.drugB)
+                    }
+                    .font(Style.DisplayedFont.Combination.title)
+                    .frame(width: LayoutMetrics.Combination.titleHorizontal, alignment: .leading)
+
                         if let interactionType = viewModel.interactionType {
                             Components(icon: interactionType.icon,
                                        status: viewModel.processedData.status,
                                        note: viewModel.processedData.note)
-                                .foregroundColor(interactionType.foregroundColor)
                                 .onAppear {
                                     currentGradient = interactionType.gradient
                                     foreColor = interactionType.foregroundColor
@@ -47,11 +41,12 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                         } else {
                             Text("No informations avaliable")
                         }
-                    }
+                    
                 }
+                .foregroundColor(foreColor)
                 .navigationBarBackButtonHidden(true)
                 .informationAlert($isShowingAlert)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, 50)
                 .backgroundGradient(currentGradient)
                 .preferredColorScheme(foreColor == .white ? .dark : .light)
                 .toolbar {
@@ -76,14 +71,14 @@ struct WarningType: View {
         HStack(alignment: .top) {
             icon
                 .resizable()
-                .aspectRatio(1, contentMode: .fit)
+                .scaledToFit()
             Text(status)
                 .fixedSize(horizontal: false, vertical: true)
                 .font(Style.DisplayedFont.Combination.interactionTypeTitle)
-                .padding(.top, 7)
+                .padding(.top, 5)
             Spacer()
         }
-        .frame(height: 48)
+        .frame(height: 50)
         .padding(EdgeInsets(top: 70, leading: -6, bottom: 100, trailing: 0))
     }
 }
@@ -117,5 +112,11 @@ struct Components: View {
                 .padding(.bottom, 50)
             
         }
+    }
+}
+
+struct CombinationView_Previews: PreviewProvider {
+    static var previews: some View {
+        CombinationView(viewModel: CombinationViewModel(substances: ["Cocaine", "LSD"]))
     }
 }

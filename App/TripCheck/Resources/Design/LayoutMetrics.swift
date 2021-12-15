@@ -9,6 +9,10 @@ enum LayoutMetrics {
         static let heightSize = (UIScreen.main.bounds.height / 16)
     }
     
+    enum Combination {
+        static let titleHorizontal = UIScreen.main.bounds.width - 100
+    }
+    
     enum Design {
         enum Padding {
             static let standard: CGFloat = 20
