@@ -13,7 +13,8 @@ class APIService: ObservableObject {
     func getInteraction(drugA: String, drugB: String, completion: @escaping (IntecationDataWrapperResult)) {
         guard let baseURL = URL(string: baseURL) else { return }
         
-        var components = URLComponents(url: baseURL.appendingPathComponent(EndPoint.getInteraction), resolvingAgainstBaseURL: true)
+        var components = URLComponents(url: baseURL.appendingPathComponent(EndPoint.getInteraction),
+                                       resolvingAgainstBaseURL: true)
         
         let path = [
             URLQueryItem(name: Strings.Api.Query.drugA, value: drugA),
@@ -27,7 +28,7 @@ class APIService: ObservableObject {
             return
         }
         
-        let task = sharedSessions.dataTask(with: url) { (data, response, error) in
+        let task = sharedSessions.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 completion(.failure(NSError(domain: "", code: 002, userInfo: ["Message": error.localizedDescription])))
                 return
