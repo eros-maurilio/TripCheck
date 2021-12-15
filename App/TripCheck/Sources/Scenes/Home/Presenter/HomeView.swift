@@ -55,7 +55,7 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
     private var buttonAppears: some View {
         ZStack {
             NavigationLink(destination:
-                            CombinationView(viewModel: CombinationViewModel(substances: viewModel.selectedSubstances)),
+                            InteractionView(viewModel: InteractionViewModel(substances: viewModel.selectedSubstances)),
                             isActive: $pushActive) {
                 EmptyView()
             }

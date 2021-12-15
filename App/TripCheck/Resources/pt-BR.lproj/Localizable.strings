@@ -7,3 +7,4 @@
 "combination.alert.action" = "Ok";
 
 "combination.note.empty" = "There is no more information available.";
+"combination.note.title" = "Note";
