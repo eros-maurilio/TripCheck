@@ -30,7 +30,7 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                     .frame(width: LayoutMetrics.Combination.titleHorizontal, alignment: .leading)
 
                         if let interactionType = viewModel.interactionType {
-                            Components(icon: interactionType.icon,
+                            InteractionComponent(icon: interactionType.icon,
                                        status: viewModel.processedData.status,
                                        note: viewModel.processedData.note)
                                 .onAppear {
@@ -60,59 +60,5 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
                 }
             }
         }
-    }
-}
-
-struct Description: View {
-    var note: String?
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("Note")
-                .font(Style.DisplayedFont.Combination.Note.title)
-                .padding(.bottom, 25)
-            
-            Text(note ?? Localizable.Combination.Note.empty)
-                .font(Style.DisplayedFont.Combination.Note.body)
-                .lineSpacing(6)
-        }
-    }
-}
-
-struct Components: View {
-    var icon: Image
-    var status: String
-    var note: String?
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            interactionType
-            
-            Description(note: note)
-                .padding(.bottom, 50)
-            
-        }
-    }
-    
-    private var interactionType: some View {
-        HStack(alignment: .top) {
-            icon
-                .resizable()
-                .scaledToFit()
-            
-            Text(status)
-                .fixedSize(horizontal: false, vertical: true)
-                .font(Style.DisplayedFont.Combination.interactionTypeTitle)
-                .padding(LayoutMetrics.Design.Padding.interactionTypeTitle)
-            
-            Spacer()
-        }
-        .interactionTypeFrame()
-    }
-}
-
-struct CombinationView_Previews: PreviewProvider {
-    static var previews: some View {
-        CombinationView(viewModel: CombinationViewModel(substances: ["Cocaine", "LSD"]))
     }
 }

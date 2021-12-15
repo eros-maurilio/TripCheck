@@ -1,4 +1,3 @@
-import UIKit
 import SwiftUI
 
 enum LayoutMetrics {
@@ -39,6 +38,7 @@ enum LayoutMetrics {
             static let body: CGFloat = 17
             static let headline: CGFloat = 18
             static let title: CGFloat = 24
+            static let standarLineSpacing: CGFloat = 6
         }
         
         enum Screen {

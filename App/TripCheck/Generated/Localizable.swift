@@ -24,6 +24,8 @@ internal enum Localizable {
     internal enum Note {
       /// There is no more information available.
       internal static let empty = Localizable.tr("Localizable", "combination.note.empty")
+      /// Note
+      internal static let title = Localizable.tr("Localizable", "combination.note.title")
     }
   }
 
