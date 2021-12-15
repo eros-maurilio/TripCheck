@@ -41,11 +41,10 @@ struct InteractionView<ViewModelType>: View where ViewModelType: InteractionView
                         }
                 }
                 .foregroundColor(foreColor)
-                .navigationBarBackButtonHidden(true)
+                .padding(.horizontal, LayoutMetrics.Design.Padding.interactionView)
+                .navStatusBarStyle(color: foreColor)
                 .informationAlert($viewModel.alert)
-                .padding(.horizontal, 50)
                 .backgroundGradient(currentGradient)
-                .preferredColorScheme(foreColor == .white ? .dark : .light)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         NavButtons(leadingButtonAction: {

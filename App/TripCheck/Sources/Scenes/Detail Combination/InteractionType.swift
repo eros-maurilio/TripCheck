@@ -34,17 +34,17 @@ enum InteractionType: String, InteractionConstructor {
     var foregroundColor: Color {
         switch self {
         case .dangerous:
-            return .white
+            return .universalWhite
         case .caution:
-            return .black
+            return .universalBlack
         case .unsafe:
-            return .white
+            return .universalWhite
         case .lowRiskDecrease:
-            return .black
+            return .universalBlack
         case .lowRiskSinergy:
-            return .white
+            return .universalWhite
         case .lowRiskNoSinergy:
-            return .black
+            return .universalBlack
         }
     }
     

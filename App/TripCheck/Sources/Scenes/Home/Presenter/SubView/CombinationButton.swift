@@ -17,7 +17,7 @@ struct CombinationButton: View {
                 
                 Spacer()
             }
-            .foregroundColor(.white)
+            .foregroundColor(.universalWhite)
             .background(Color.tripBlue)
             .cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
         }
