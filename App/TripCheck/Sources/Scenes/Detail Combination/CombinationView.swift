@@ -63,26 +63,6 @@ struct CombinationView<ViewModelType>: View where ViewModelType: CombinationView
     }
 }
 
-struct WarningType: View {
-    var icon: Image
-    var status: String
-    
-    var body: some View {
-        HStack(alignment: .top) {
-            icon
-                .resizable()
-                .scaledToFit()
-            Text(status)
-                .fixedSize(horizontal: false, vertical: true)
-                .font(Style.DisplayedFont.Combination.interactionTypeTitle)
-                .padding(.top, 5)
-            Spacer()
-        }
-        .frame(height: 50)
-        .padding(EdgeInsets(top: 70, leading: -6, bottom: 100, trailing: 0))
-    }
-}
-
 struct Description: View {
     var note: String?
     
@@ -106,12 +86,28 @@ struct Components: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            WarningType(icon: icon, status: status)
+            interactionType
             
             Description(note: note)
                 .padding(.bottom, 50)
             
         }
+    }
+    
+    private var interactionType: some View {
+        HStack(alignment: .top) {
+            icon
+                .resizable()
+                .scaledToFit()
+            
+            Text(status)
+                .fixedSize(horizontal: false, vertical: true)
+                .font(Style.DisplayedFont.Combination.interactionTypeTitle)
+                .padding(LayoutMetrics.Design.Padding.interactionTypeTitle)
+            
+            Spacer()
+        }
+        .interactionTypeFrame()
     }
 }
 

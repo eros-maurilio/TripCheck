@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 enum LayoutMetrics {
     enum Home {
@@ -11,6 +12,12 @@ enum LayoutMetrics {
     
     enum Combination {
         static let titleHorizontal = UIScreen.main.bounds.width - 100
+        
+        enum InteractionType {
+            static let height: CGFloat = 50
+            static let padding = EdgeInsets(top: 100, leading: -6, bottom: 120, trailing: 0)
+
+        }
     }
     
     enum Design {
@@ -19,6 +26,7 @@ enum LayoutMetrics {
             static let bottom: CGFloat = 30
             static let buttonIcon: CGFloat = 10
             static let tag: CGFloat = 10
+            static let interactionTypeTitle: CGFloat = 5
         }
         
         enum Style {

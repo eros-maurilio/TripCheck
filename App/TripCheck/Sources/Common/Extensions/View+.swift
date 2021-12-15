@@ -41,6 +41,11 @@ extension View {
                    alignment: .center)
     }
     
+    func interactionTypeFrame() -> some View {
+        self.frame(height: LayoutMetrics.Combination.InteractionType.height)
+            .padding(LayoutMetrics.Combination.InteractionType.padding)
+    }
+    
     // MARK: - Styling
     
     func backgroundGradient(_ style: [Color]) -> some View {
