@@ -3,12 +3,15 @@ import SwiftUI
 struct InteractionView<ViewModelType>: View where ViewModelType: InteractionViewModelProtocol {
     @ObservedObject var viewModel: ViewModelType
     
-    @State private var currentGradient = Style.Gradient.home
-    @State var foreColor: Color = .clear
-    @State var isShowingAlert = false
+    // MARK: - View's Atributes
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) private var presentationMode
+    @GestureState private var dragOffset = CGSize.zero
+    @State private var currentGradient = Style.Gradient.home
+    @State private var foreColor: Color = .clear
 
+    // MARK: - View
+    
     var body: some View {
         ZStack {
             if viewModel.interactionType == nil {
@@ -37,24 +40,22 @@ struct InteractionView<ViewModelType>: View where ViewModelType: InteractionView
                                     currentGradient = interactionType.gradient
                                     foreColor = interactionType.foregroundColor
                                 }
-                            
                         } else {
-                            Text("No informations avaliable")
+                            Text(Localizable.Combination.Empty.text)
                         }
-                    
                 }
                 .foregroundColor(foreColor)
-                .navigationBarBackButtonHidden(true)
-                .informationAlert($isShowingAlert)
-                .padding(.horizontal, 50)
+                .padding(.horizontal, LayoutMetrics.Design.Padding.interactionView)
+                .navStatusBarStyle(color: foreColor)
+                .informationAlert($viewModel.alert)
                 .backgroundGradient(currentGradient)
-                .preferredColorScheme(foreColor == .white ? .dark : .light)
+                .swipeBack($dragOffset) { presentationMode.wrappedValue.dismiss() }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         NavButtons(leadingButtonAction: {
                             presentationMode.wrappedValue.dismiss()
                         }, trailingButtonAction: {
-                            isShowingAlert = true
+                            viewModel.showAlert()
                         }, color: foreColor)
                     }
                 }

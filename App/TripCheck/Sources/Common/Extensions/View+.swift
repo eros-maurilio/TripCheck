@@ -55,18 +55,23 @@ extension View {
     }
     
     func dimShadow() -> some View {
-        self.shadow(color: .black.opacity(0.3),
+        self.shadow(color: .universalBlack.opacity(0.3),
                     radius: 10, x: 0, y: 10)
     }
     
     func lightShadow() -> some View {
-        self.shadow(color: .black.opacity(0.1),
+        self.shadow(color: .universalBlack.opacity(0.1),
                     radius: 10, x: 0, y: 4)
     }
     
     func tagStyleFontPadding() -> some View {
         self.font(Style.DisplayedFont.Tag.body)
             .padding(LayoutMetrics.Design.Padding.tag)
+    }
+    
+    func navStatusBarStyle(color: Color) -> some View {
+        self.preferredColorScheme(color == .universalWhite || color == .clear ? .dark : .light)
+            .navigationBarBackButtonHidden(true)
     }
     
     // MARK: - Modifiers
@@ -87,6 +92,15 @@ extension View {
                   message: Text(Localizable.Combination.Alert.text),
                   dismissButton: .default(Text(Localizable.Combination.Alert.action)))
         })
+    }
+    
+    func swipeBack(_ dragOffSet: GestureState<CGSize>, _ dimiss: @escaping () -> Void) -> some View {
+        self.gesture(DragGesture().updating(dragOffSet, body: { value, _, _ in
+            
+            if value.startLocation.x < 20 && value.translation.width > 100 {
+                dimiss()
+            }}))
+
     }
 }
 

@@ -26,6 +26,7 @@ enum LayoutMetrics {
             static let buttonIcon: CGFloat = 10
             static let tag: CGFloat = 10
             static let interactionTypeTitle: CGFloat = 5
+            static let interactionView: CGFloat = 50
         }
         
         enum Style {

@@ -5,6 +5,11 @@ enum Style {
         static let home: [Color] = [.homeTop, .homeBottom]
     }
     
+    enum zIndex {
+        static let back: CGFloat = 0
+        static let front: CGFloat = 1
+    }
+    
     enum BottomGradient {
         static let home:  [Color] = [.homeTop.opacity(0.01), .homeBottom]
     }
@@ -12,13 +17,13 @@ enum Style {
     enum TagColor {
         
         enum Text {
-            static let defaut: Color = .black.opacity(0.6)
-            static let selected: Color = .white
+            static let defaut: Color = .universalBlack.opacity(0.6)
+            static let selected: Color = .universalWhite
         }
         
         enum background {
             static let selected: some View = Color.tripBlue.cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
-            static let notSelect: some View = Color.white.cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
+            static let notSelect: some View = Color.universalWhite.cornerRadius(LayoutMetrics.Design.Style.cornerRadius)
         }
     }
     
