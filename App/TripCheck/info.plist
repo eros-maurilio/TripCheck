@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LastAccessedDate</key>
+	<date>2021-12-06T12:54:49Z</date>
 	<key>UIAppFonts</key>
 	<array>
 		<string>PublicSans-Black.ttf</string>
@@ -23,11 +25,7 @@
 		<string>PublicSans-Thin.ttf</string>
 		<string>PublicSans-ThinItalic.ttf</string>
 	</array>
-	<key>LastAccessedDate</key>
-	<date>2021-12-06T12:54:49Z</date>
 	<key>WorkspacePath</key>
 	<string>/Users/erosmaurilio/Documents/CrashChallenge4/TripCheck.xcodeproj</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 </dict>
 </plist>
