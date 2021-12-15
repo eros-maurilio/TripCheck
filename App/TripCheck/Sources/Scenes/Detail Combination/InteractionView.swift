@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CombinationView<ViewModelType>: View where ViewModelType: CombinationViewModelProtocol {
+struct InteractionView<ViewModelType>: View where ViewModelType: InteractionViewModelProtocol {
     @ObservedObject var viewModel: ViewModelType
     
     @State private var currentGradient = Style.Gradient.home

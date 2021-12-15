@@ -1,7 +1,7 @@
 import Combine
 import SwiftUI
 
-protocol CombinationViewModelProtocol: ObservableObject {
+protocol InteractionViewModelProtocol: ObservableObject {
     var processedData: DrugInteractionResponse { get }
     var substances: [String] { get }
     var drugA: String { get }
@@ -9,7 +9,7 @@ protocol CombinationViewModelProtocol: ObservableObject {
     var interactionType: InteractionType? { get }
 }
 
-final class CombinationViewModel: CombinationViewModelProtocol {
+final class InteractionViewModel: InteractionViewModelProtocol {
     
     // MARK: - Atributes
     @Published var processedData: DrugInteractionResponse
