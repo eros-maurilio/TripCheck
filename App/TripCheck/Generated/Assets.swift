@@ -36,6 +36,7 @@ internal extension Image {
   static var sinergy : Image { Image("sinergy", bundle: BundleToken.bundle) }
   static var stable : Image { Image("stable", bundle: BundleToken.bundle) }
   static var symptom : Image { Image("symptom", bundle: BundleToken.bundle) }
+  static var launchBg : Image { Image("LaunchBg", bundle: BundleToken.bundle) }
 }
 
 private final class BundleToken {
