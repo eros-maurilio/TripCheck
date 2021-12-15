@@ -4,10 +4,9 @@ struct InteractionView<ViewModelType>: View where ViewModelType: InteractionView
     @ObservedObject var viewModel: ViewModelType
     
     @State private var currentGradient = Style.Gradient.home
-    @State var foreColor: Color = .clear
-    @State var isShowingAlert = false
+    @State private var foreColor: Color = .clear
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) private var presentationMode
 
     var body: some View {
         ZStack {
@@ -37,15 +36,13 @@ struct InteractionView<ViewModelType>: View where ViewModelType: InteractionView
                                     currentGradient = interactionType.gradient
                                     foreColor = interactionType.foregroundColor
                                 }
-                            
                         } else {
-                            Text("No informations avaliable")
+                            Text(Localizable.Combination.Empty.text)
                         }
-                    
                 }
                 .foregroundColor(foreColor)
                 .navigationBarBackButtonHidden(true)
-                .informationAlert($isShowingAlert)
+                .informationAlert($viewModel.alert)
                 .padding(.horizontal, 50)
                 .backgroundGradient(currentGradient)
                 .preferredColorScheme(foreColor == .white ? .dark : .light)
@@ -54,7 +51,7 @@ struct InteractionView<ViewModelType>: View where ViewModelType: InteractionView
                         NavButtons(leadingButtonAction: {
                             presentationMode.wrappedValue.dismiss()
                         }, trailingButtonAction: {
-                            isShowingAlert = true
+                            viewModel.showAlert()
                         }, color: foreColor)
                     }
                 }

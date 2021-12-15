@@ -26,7 +26,7 @@
 		14812AAF27133683000C298D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14812AAE27133683000C298D /* APIService.swift */; };
 		148D76F9275E607100BF772E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 148D76F7275E607100BF772E /* Localizable.strings */; };
 		148D76FF275E615F00BF772E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D76FE275E615F00BF772E /* Localizable.swift */; };
-		14BE57A22763932B00C962A2 /* CombinationViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE57A12763932B00C962A2 /* CombinationViewModel.swift.swift */; };
+		14BE57A22763932B00C962A2 /* InteractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE57A12763932B00C962A2 /* InteractionViewModel.swift */; };
 		14CB230F2760470300833087 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB230E2760470300833087 /* Style.swift */; };
 		14D6A597271073E400195697 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A596271073E400195697 /* InteractionView.swift */; };
 		14F84E97276911E90066C765 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F84E96276911E90066C765 /* CustomNavBar.swift */; };
@@ -80,7 +80,7 @@
 		14812AAE27133683000C298D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		148D76F8275E607100BF772E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		148D76FE275E615F00BF772E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		14BE57A12763932B00C962A2 /* CombinationViewModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationViewModel.swift.swift; sourceTree = "<group>"; };
+		14BE57A12763932B00C962A2 /* InteractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewModel.swift; sourceTree = "<group>"; };
 		14C5F70F275F986A00E16E3A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14CB230E2760470300833087 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		14D6A596271073E400195697 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
@@ -218,13 +218,6 @@
 			path = Subview;
 			sourceTree = "<group>";
 		};
-		14812AAD271335DA000C298D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		148D76EA275E4C1900BF772E /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,7 +316,6 @@
 				145DD8EC275E4A8700AF3FE8 /* Resources */,
 				145DD8ED275E4B0900AF3FE8 /* Sources */,
 				145DD8E7275E3E6600AF3FE8 /* Info.plist */,
-				14812AAD271335DA000C298D /* ViewModel */,
 			);
 			path = TripCheck;
 			sourceTree = "<group>";
@@ -347,10 +339,10 @@
 		14FFE4E4270F8AED00B1AA02 /* Detail Combination */ = {
 			isa = PBXGroup;
 			children = (
-				146A592F276A2D92007C4AE6 /* Subview */,
-				14375D5E2711FAEB00260DE9 /* InteractionType.swift */,
 				14D6A596271073E400195697 /* InteractionView.swift */,
-				14BE57A12763932B00C962A2 /* CombinationViewModel.swift.swift */,
+				14BE57A12763932B00C962A2 /* InteractionViewModel.swift */,
+				14375D5E2711FAEB00260DE9 /* InteractionType.swift */,
+				146A592F276A2D92007C4AE6 /* Subview */,
 			);
 			path = "Detail Combination";
 			sourceTree = "<group>";
@@ -571,7 +563,7 @@
 				1447835427600B800025C1B1 /* LayoutMetrics.swift in Sources */,
 				14FFE4D8270F88C300B1AA02 /* Application.swift in Sources */,
 				14FFE4ED270F933B00B1AA02 /* CombinationButton.swift in Sources */,
-				14BE57A22763932B00C962A2 /* CombinationViewModel.swift.swift in Sources */,
+				14BE57A22763932B00C962A2 /* InteractionViewModel.swift in Sources */,
 				144C9DEB275F8A5A00E8C91C /* Fonts.swift in Sources */,
 				14126BF8275FE539009ADEC7 /* Assets.swift in Sources */,
 				14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */,

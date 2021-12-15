@@ -3,19 +3,26 @@ import SwiftUI
 
 protocol InteractionViewModelProtocol: ObservableObject {
     var processedData: DrugInteractionResponse { get }
-    var substances: [String] { get }
     var drugA: String { get }
     var drugB: String { get }
     var interactionType: InteractionType? { get }
+    var alert: Bool { get set }
+    
+    func showAlert()
 }
 
 final class InteractionViewModel: InteractionViewModelProtocol {
     
     // MARK: - Atributes
+    
     @Published var processedData: DrugInteractionResponse
     @Published var interactionType: InteractionType?
+    @Published var alert: Bool
+    
+    // MARK: - Private Atributes
+    
     private var combinationData: [DrugInteractionResponse]
-    var substances: [String]
+    private var substances: [String]
     
     // MARK: - Computed Variables
     
@@ -31,6 +38,7 @@ final class InteractionViewModel: InteractionViewModelProtocol {
                                                 note: String(),
                                                 interactionCategoryA: String(),
                                                 interactionCategoryB: String())
+        alert = false
         loadCombination(drugA: drugA, drugB: drugB)
     }
     
@@ -60,4 +68,6 @@ final class InteractionViewModel: InteractionViewModelProtocol {
             }
         }
     }
+    
+    func showAlert() { alert = true }
 }
