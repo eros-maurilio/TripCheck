@@ -2,7 +2,6 @@ import SwiftUI
 
 struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol {
     @ObservedObject var viewModel: ViewModelType
-    @State var pushActive = false
     
     // MARK: - View
     
@@ -13,6 +12,7 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
                 tags
             }
             .backgroundGradient(Style.Gradient.home)
+            .zIndex(Style.zIndex.back)
             
             if viewModel.isTheButtonVisible { buttonAppears }
             
@@ -56,16 +56,17 @@ struct HomeView<ViewModelType>: View where ViewModelType: HomeViewModelProtocol 
         ZStack {
             NavigationLink(destination:
                             InteractionView(viewModel: InteractionViewModel(substances: viewModel.selectedSubstances)),
-                            isActive: $pushActive) {
+                           isActive: $viewModel.pushView) {
                 EmptyView()
             }
             .hidden()
             
-            CombinationButton { pushActive = true }
+            CombinationButton { viewModel.executePushView() }
             .buttonFrame()
             .standardHorizontalPadding()
             .standardBottomPadding()
             .dimShadow()
         }
+        .zIndex(Style.zIndex.front)
     }
 }

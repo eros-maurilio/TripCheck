@@ -1,12 +1,13 @@
-import Foundation
 import SwiftUI
 
 protocol HomeViewModelProtocol: ObservableObject {
     var selectedSubstances: [String] { get set }
+    var pushView: Bool { get set }
     var isTheButtonVisible: Bool { get }
     var substancesList: [String] { get }
     
     func substanceSelection(substance: String)
+    func executePushView()
     func showButton()
 }
 
@@ -16,6 +17,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     @Published var selectedSubstances: [String]
     @Published var isTheButtonVisible: Bool
+    @Published var pushView: Bool
     
     // MARK: - Private Atributes
     
@@ -33,6 +35,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     init() {
         selectedSubstances = [String]()
         isTheButtonVisible = false
+        pushView = false
     }
     
     // MARK: - View properties Exchanger
@@ -50,6 +53,8 @@ final class HomeViewModel: HomeViewModelProtocol {
             isTheButtonVisible = false
         }
     }
+    
+    func executePushView() { pushView = true }
     
     // MARK: - Helper Methods
     

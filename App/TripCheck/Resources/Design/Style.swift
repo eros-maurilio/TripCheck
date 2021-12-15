@@ -5,6 +5,11 @@ enum Style {
         static let home: [Color] = [.homeTop, .homeBottom]
     }
     
+    enum zIndex {
+        static let back: CGFloat = 0
+        static let front: CGFloat = 1
+    }
+    
     enum BottomGradient {
         static let home:  [Color] = [.homeTop.opacity(0.01), .homeBottom]
     }

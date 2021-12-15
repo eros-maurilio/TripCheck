@@ -27,5 +27,3 @@ struct TypeOf {
                      "SSRIs",
                      "Tramadol"]
 }
-
-// TODO: JSON, codingkeys?

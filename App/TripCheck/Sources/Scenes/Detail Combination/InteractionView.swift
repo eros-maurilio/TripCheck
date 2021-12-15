@@ -3,11 +3,15 @@ import SwiftUI
 struct InteractionView<ViewModelType>: View where ViewModelType: InteractionViewModelProtocol {
     @ObservedObject var viewModel: ViewModelType
     
-    @State private var currentGradient = Style.Gradient.home
-    @State private var foreColor: Color = .clear
+    // MARK: - View's Atributes
     
     @Environment(\.presentationMode) private var presentationMode
+    @GestureState private var dragOffset = CGSize.zero
+    @State private var currentGradient = Style.Gradient.home
+    @State private var foreColor: Color = .clear
 
+    // MARK: - View
+    
     var body: some View {
         ZStack {
             if viewModel.interactionType == nil {
@@ -45,6 +49,7 @@ struct InteractionView<ViewModelType>: View where ViewModelType: InteractionView
                 .navStatusBarStyle(color: foreColor)
                 .informationAlert($viewModel.alert)
                 .backgroundGradient(currentGradient)
+                .swipeBack($dragOffset) { presentationMode.wrappedValue.dismiss() }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         NavButtons(leadingButtonAction: {

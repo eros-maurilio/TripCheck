@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct InteractionComponent: View {
+    
+    // MARK: - Atributes
+    
     var icon: Image
     var status: String
     var note: String?
@@ -14,6 +17,8 @@ struct InteractionComponent: View {
         .padding(.bottom, LayoutMetrics.Design.Padding.bottom)
     }
     
+    // MARK: - SubViews
+
     private var interactionBlock: some View {
         HStack(alignment: .top) {
             icon

@@ -11,14 +11,12 @@ struct Tag: View {
                 Text(verbatim: substance)
             }
             .tagSelected()
-            .transition(.opacity)
             
         } else {
             VStack {
                 Text(verbatim: substance)
             }
             .tagNotSelected()
-            .transition(.opacity)
         }
     }
 }

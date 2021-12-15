@@ -27,5 +27,7 @@
 	<date>2021-12-06T12:54:49Z</date>
 	<key>WorkspacePath</key>
 	<string>/Users/erosmaurilio/Documents/CrashChallenge4/TripCheck.xcodeproj</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

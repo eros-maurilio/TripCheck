@@ -93,6 +93,15 @@ extension View {
                   dismissButton: .default(Text(Localizable.Combination.Alert.action)))
         })
     }
+    
+    func swipeBack(_ dragOffSet: GestureState<CGSize>, _ dimiss: @escaping () -> Void) -> some View {
+        self.gesture(DragGesture().updating(dragOffSet, body: { value, _, _ in
+            
+            if value.startLocation.x < 20 && value.translation.width > 100 {
+                dimiss()
+            }}))
+
+    }
 }
 
 private struct SizePreferenceKey: PreferenceKey {
