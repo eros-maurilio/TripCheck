@@ -29,6 +29,7 @@
 		148D76FF275E615F00BF772E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D76FE275E615F00BF772E /* Localizable.swift */; };
 		14BE57A22763932B00C962A2 /* InteractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE57A12763932B00C962A2 /* InteractionViewModel.swift */; };
 		14CB230F2760470300833087 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB230E2760470300833087 /* Style.swift */; };
+		14CFF35227D2740100B039CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CFF35127D2740100B039CB /* GoogleService-Info.plist */; };
 		14D6A597271073E400195697 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A596271073E400195697 /* InteractionView.swift */; };
 		14F84E97276911E90066C765 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F84E96276911E90066C765 /* CustomNavBar.swift */; };
 		14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */; };
@@ -85,6 +86,7 @@
 		14BE57A12763932B00C962A2 /* InteractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewModel.swift; sourceTree = "<group>"; };
 		14C5F70F275F986A00E16E3A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14CB230E2760470300833087 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		14CFF35127D2740100B039CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14D6A596271073E400195697 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		14F84E96276911E90066C765 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		14FFE4D2270F88C300B1AA02 /* TripCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 		145DD8EC275E4A8700AF3FE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14CFF35127D2740100B039CB /* GoogleService-Info.plist */,
 				14232FDE2762767B003C34BB /* Strings.strings */,
 				148D76F7275E607100BF772E /* Localizable.strings */,
 				14FFE4D9270F88C600B1AA02 /* Assets.xcassets */,
@@ -422,6 +425,8 @@
 				14FFE4CE270F88C300B1AA02 /* Sources */,
 				14FFE4CF270F88C300B1AA02 /* Frameworks */,
 				14FFE4D0270F88C300B1AA02 /* Resources */,
+				3CAE6DA2EB0792D8910697B2 /* [CP] Embed Pods Frameworks */,
+				14239A9527D277E6001FF93F /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -473,6 +478,7 @@
 			files = (
 				14FFE51E270F967F00B1AA02 /* PublicSans-ExtraBold.ttf in Resources */,
 				14FFE4DD270F88C600B1AA02 /* Preview Assets.xcassets in Resources */,
+				14CFF35227D2740100B039CB /* GoogleService-Info.plist in Resources */,
 				14FFE522270F967F00B1AA02 /* PublicSans-Regular.ttf in Resources */,
 				14FFE525270F967F00B1AA02 /* PublicSans-Bold.ttf in Resources */,
 				14FFE51C270F967F00B1AA02 /* PublicSans-SemiBold.ttf in Resources */,
@@ -518,6 +524,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config ../Config/swiftlint.yml\n";
 		};
+		14239A9527D277E6001FF93F /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		148D76F0275E521300BF772E /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +561,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\" config run --config ../Config/swiftgen.yml\n\n";
+		};
+		3CAE6DA2EB0792D8910697B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripCheck/Pods-TripCheck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripCheck/Pods-TripCheck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripCheck/Pods-TripCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		CD47F82154DF574C16D252DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -736,6 +779,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"TripCheck/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4957F54262;
 				ENABLE_PREVIEWS = YES;
@@ -754,7 +798,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TripCheck.App.Eros;
+				PRODUCT_BUNDLE_IDENTIFIER = TripCheck.App.Development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -788,7 +832,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TripCheck.App.Eros;
+				PRODUCT_BUNDLE_IDENTIFIER = TripCheck.App.Development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
