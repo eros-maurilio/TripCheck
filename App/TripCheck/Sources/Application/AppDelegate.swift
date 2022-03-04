@@ -1,4 +1,5 @@
 import SwiftUI
+import Firebase
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -13,7 +14,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             UINavigationBar
                 .appearance()
                 .titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(Color.tripBlue)]
-                    
+                  
+        FirebaseApp.configure()
+        
         return true
     }
 }
