@@ -17,3 +17,6 @@ More information about the TripSit API can be found here: https://wiki.tripsit.m
 - [ ] Translation to PT-BR
 - [ ] Offline Operation
 - [ ] Search for specific information about substances
+
+## Note ⚠️
+*To run this project it is necessary to use the pod install!*
