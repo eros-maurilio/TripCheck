@@ -5,7 +5,7 @@
 <p align="left">Trip Check aims to help people become aware of using substances in combination. Knowing the direct effects of mixing substances allows harm reduction actions, minimizing the impact of drug use on the human body.</p>
 
 ## Technologies ⚙️
-<p align="left">This App was developed in SwiftUI for iOS 15, using the MVVM architecture. In addition, Pods such as: SwiftGen and SwiftLint were also used. Substance interaction data comes from the TripSit API.
+<p align="left">This App was developed in SwiftUI for iOS 14, using the MVVM architecture. In addition, Pods such as: SwiftGen and SwiftLint were also used. Substance interaction data comes from the TripSit API.
 
 More information about the TripSit API can be found here: https://wiki.tripsit.me/wiki/Factsheets</p>
 
@@ -14,6 +14,8 @@ More information about the TripSit API can be found here: https://wiki.tripsit.m
 
 ## Features 📱
 - [x] Interaction between two substances
+- [x] Analytics/ Crashlytics and AppTrackingTransparency
+- [x] iOS 14 support
 - [ ] Translation to PT-BR
 - [ ] Offline Operation
 - [ ] Search for specific information about substances
