@@ -29,6 +29,8 @@
 		148D76FF275E615F00BF772E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D76FE275E615F00BF772E /* Localizable.swift */; };
 		14BE57A22763932B00C962A2 /* InteractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE57A12763932B00C962A2 /* InteractionViewModel.swift */; };
 		14CB230F2760470300833087 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB230E2760470300833087 /* Style.swift */; };
+		14D10A3227D7F80E00364261 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14D10A3127D7F80E00364261 /* GoogleService-Info.plist */; };
+		14D10A3527D7FF7800364261 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D10A3427D7FF7800364261 /* AppTrackingTransparency.framework */; };
 		14D6A597271073E400195697 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A596271073E400195697 /* InteractionView.swift */; };
 		14F84E97276911E90066C765 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F84E96276911E90066C765 /* CustomNavBar.swift */; };
 		14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */; };
@@ -85,6 +87,8 @@
 		14BE57A12763932B00C962A2 /* InteractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewModel.swift; sourceTree = "<group>"; };
 		14C5F70F275F986A00E16E3A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14CB230E2760470300833087 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		14D10A3127D7F80E00364261 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14D10A3427D7FF7800364261 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		14D6A596271073E400195697 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		14F84E96276911E90066C765 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		14FFE4D2270F88C300B1AA02 /* TripCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				394CF7656F87F0C654CCE80D /* Pods_TripCheck.framework in Frameworks */,
+				14D10A3527D7FF7800364261 /* AppTrackingTransparency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +184,7 @@
 		145DD8EC275E4A8700AF3FE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14D10A3127D7F80E00364261 /* GoogleService-Info.plist */,
 				14232FDE2762767B003C34BB /* Strings.strings */,
 				148D76F7275E607100BF772E /* Localizable.strings */,
 				14FFE4D9270F88C600B1AA02 /* Assets.xcassets */,
@@ -395,6 +401,7 @@
 		612CD03F7A3F0E953F19DEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14D10A3427D7FF7800364261 /* AppTrackingTransparency.framework */,
 				9D7657CFF33EBA8A16CBDFF9 /* Pods_TripCheck.framework */,
 			);
 			name = Frameworks;
@@ -422,6 +429,8 @@
 				14FFE4CE270F88C300B1AA02 /* Sources */,
 				14FFE4CF270F88C300B1AA02 /* Frameworks */,
 				14FFE4D0270F88C300B1AA02 /* Resources */,
+				8A0DB453ACF46051000374E9 /* [CP] Embed Pods Frameworks */,
+				14D10A3327D7FAF600364261 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -488,6 +497,7 @@
 				148D76F9275E607100BF772E /* Localizable.strings in Resources */,
 				14FFE52B270F967F00B1AA02 /* PublicSans-Italic.ttf in Resources */,
 				14FFE528270F967F00B1AA02 /* PublicSans-ExtraLight.ttf in Resources */,
+				14D10A3227D7F80E00364261 /* GoogleService-Info.plist in Resources */,
 				14FFE51B270F967F00B1AA02 /* PublicSans-Medium.ttf in Resources */,
 				14FFE51F270F967F00B1AA02 /* PublicSans-ThinItalic.ttf in Resources */,
 				14FFE524270F967F00B1AA02 /* PublicSans-ExtraLightItalic.ttf in Resources */,
@@ -535,6 +545,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\" config run --config ../Config/swiftgen.yml\n\n";
+		};
+		14D10A3327D7FAF600364261 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		8A0DB453ACF46051000374E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripCheck/Pods-TripCheck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripCheck/Pods-TripCheck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripCheck/Pods-TripCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		CD47F82154DF574C16D252DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -662,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -718,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -736,11 +783,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"TripCheck/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4957F54262;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_FILE[sdk=*]" = /Users/erosmaurilio/Documents/CrashChallenge4/App/TripCheck/info.plist;
+				"INFOPLIST_FILE[sdk=*]" = ../App/TripCheck/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -754,7 +802,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Eros.learning.2021.CrashChallenge4;
+				PRODUCT_BUNDLE_IDENTIFIER = TripCheck.App.Development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -774,7 +822,7 @@
 				DEVELOPMENT_TEAM = 4957F54262;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_FILE[sdk=*]" = /Users/erosmaurilio/Documents/CrashChallenge4/App/TripCheck/info.plist;
+				"INFOPLIST_FILE[sdk=*]" = ../App/TripCheck/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -788,7 +836,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Eros.learning.2021.CrashChallenge4;
+				PRODUCT_BUNDLE_IDENTIFIER = TripCheck.App.Development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
