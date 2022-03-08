@@ -1,4 +1,5 @@
 import SwiftUI
+import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -14,6 +15,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 .appearance()
                 .titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(Color.tripBlue)]
                     
+        FirebaseApp.configure()
+        
         return true
     }
 }
