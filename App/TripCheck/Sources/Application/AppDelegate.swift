@@ -1,6 +1,7 @@
 import SwiftUI
 import FirebaseCore
 
+
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -19,4 +20,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         return true
     }
-}
+    
+//    func applicationDidBecomeActive(_ application: UIApplication) {
+//        requestDataPermission()
+//    }
+    
+        }

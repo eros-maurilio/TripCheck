@@ -27,5 +27,7 @@
 	</array>
 	<key>WorkspacePath</key>
 	<string>/Users/erosmaurilio/Documents/CrashChallenge4/TripCheck.xcodeproj</string>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>We only use tracking for analysis purposes, we do not share this data with other services, other than that mentioned in our privacy policy.</string>
 </dict>
 </plist>

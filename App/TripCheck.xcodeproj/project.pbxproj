@@ -30,6 +30,7 @@
 		14BE57A22763932B00C962A2 /* InteractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE57A12763932B00C962A2 /* InteractionViewModel.swift */; };
 		14CB230F2760470300833087 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB230E2760470300833087 /* Style.swift */; };
 		14D10A3227D7F80E00364261 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14D10A3127D7F80E00364261 /* GoogleService-Info.plist */; };
+		14D10A3527D7FF7800364261 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D10A3427D7FF7800364261 /* AppTrackingTransparency.framework */; };
 		14D6A597271073E400195697 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A596271073E400195697 /* InteractionView.swift */; };
 		14F84E97276911E90066C765 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F84E96276911E90066C765 /* CustomNavBar.swift */; };
 		14FFE4D6270F88C300B1AA02 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFE4D5270F88C300B1AA02 /* AppLauncher.swift */; };
@@ -87,6 +88,7 @@
 		14C5F70F275F986A00E16E3A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14CB230E2760470300833087 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		14D10A3127D7F80E00364261 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14D10A3427D7FF7800364261 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		14D6A596271073E400195697 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		14F84E96276911E90066C765 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		14FFE4D2270F88C300B1AA02 /* TripCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				394CF7656F87F0C654CCE80D /* Pods_TripCheck.framework in Frameworks */,
+				14D10A3527D7FF7800364261 /* AppTrackingTransparency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +401,7 @@
 		612CD03F7A3F0E953F19DEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14D10A3427D7FF7800364261 /* AppTrackingTransparency.framework */,
 				9D7657CFF33EBA8A16CBDFF9 /* Pods_TripCheck.framework */,
 			);
 			name = Frameworks;
