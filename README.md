@@ -11,6 +11,7 @@ More information about the TripSit API can be found here: https://wiki.tripsit.m
 
 ## Project Status 🏗
 <p align="left">The core of the App is implemented and functional, but this is a project still under development that will have more features in the future.</p>
+TestFlight: https://testflight.apple.com/join/QEwT8CIr
 
 ## Features 📱
 - [x] Interaction between two substances
